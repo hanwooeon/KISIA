@@ -15,3 +15,5 @@ def parse_file(file_path: str) -> str:
     converter = DocumentConverter()
     result = converter.convert(str(path))
     return result.document.export_to_markdown()
+
+
