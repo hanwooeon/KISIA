@@ -5,6 +5,8 @@ from pathlib import Path
 from Parshing.parser import parse_file
 from Parshing.cleaner import clean_markdown
 from Chunking.chunker import chunk_markdown, save_chunks
+from Embedding.embedder import embed_texts
+from DB.uploader import upload_chunks
 
 
 def unique_path(base: Path) -> Path:
@@ -46,6 +48,16 @@ chunks = chunk_markdown(cleaned, source=filename)
 
 output_path = unique_path(pdf_path.parent / f"{pdf_path.stem}_chunks.json")
 save_chunks(chunks, str(output_path))
+print(f"청킹 완료: {len(chunks)}개 청크 → {output_path}")
 
-print(f"청킹 완료: {len(chunks)}개 청크")
-print(f"저장 완료 → {output_path}")
+print("임베딩 중 ...")
+contents = [c['content'] for c in chunks]
+embeddings = embed_texts(contents)
+print("임베딩 완료")
+
+for chunk, emb in zip(chunks, embeddings):
+    chunk['embedding'] = emb
+
+print("DB 업로드 중 ...")
+upload_chunks(chunks)
+print(f"업로드 완료: {len(chunks)}개 청크 → Supabase")

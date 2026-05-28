@@ -1,0 +1,5 @@
+docling
+gradio_client
+FlagEmbedding
+supabase
+python-dotenv
