@@ -6,6 +6,8 @@ from pathlib import Path
 _TABLE_SEP = re.compile(r'^\|[-| :]+\|$')
 _TABLE_ROW = re.compile(r'^\|(.+)\|$')
 _HEADING = re.compile(r'^\*\*\d+\.\s+.+\*\*$|^#{1,3}\s+.+')
+_ARTICLE_HEADING = re.compile(r'^#{1,6}\s+(\d+)\.\s+(.+)')
+_SUBSECTION_HEADING = re.compile(r'^#{1,6}\s+([가나다라마바사아자차카타파하])\s*\.\s+(.+)')
 
 IMAGE_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.tiff'}
 
@@ -136,24 +138,48 @@ def _chunk_general_document(text: str, source: str) -> list[dict]:
     chunks = []
     chunk_id = 1
     current_section = '본문'
+    current_article_no = ''
+    current_article_title = ''
+    current_subsection = ''
     current_lines: list[str] = []
 
     def flush():
         nonlocal chunk_id
         content = '\n'.join(current_lines).strip()
         if content:
-            chunks.append({
+            chunk: dict = {
                 'chunk_id': chunk_id,
                 'source': source,
                 'section': current_section,
                 'content': content,
-            })
+            }
+            if current_article_no:
+                chunk['article_no'] = current_article_no
+                chunk['article_title'] = current_article_title
+            if current_subsection:
+                chunk['subsection'] = current_subsection
+            chunks.append(chunk)
             chunk_id += 1
         current_lines.clear()
 
     for line in text.split('\n'):
         stripped = line.strip()
-        if _HEADING.match(stripped):
+        article_m = _ARTICLE_HEADING.match(stripped)
+        subsection_m = _SUBSECTION_HEADING.match(stripped)
+
+        if article_m:
+            if current_lines:
+                flush()
+            current_article_no = article_m.group(1)
+            current_article_title = article_m.group(2).strip()
+            current_section = f"{current_article_no}. {current_article_title}"
+            current_subsection = ''
+        elif subsection_m:
+            if current_lines:
+                flush()
+            current_subsection = subsection_m.group(1)
+            current_section = re.sub(r'[#*]+\s*', '', stripped).strip()
+        elif _HEADING.match(stripped):
             if current_lines:
                 flush()
             current_section = re.sub(r'[#*]+\s*', '', stripped).strip()
