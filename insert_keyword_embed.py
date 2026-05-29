@@ -7,10 +7,10 @@ import psycopg2
 from psycopg2 import sql
 
 DB_NAME = "postgres"
-DB_HOST = "db.egyivijauaxjrrelibrf.supabase.co"
+DB_HOST = "aws-1-ap-northeast-2.pooler.supabase.com"
 DB_PORT = 5432
-DB_USER = "postgres"
-DB_PASSWORD = ""
+DB_USER = "postgres.egyivijauaxjrrelibrf"
+DB_PASSWORD = "wjdqhqhdks@"
 
 KEYWORD_EMBED_PATH = r"d:\code\KISIA\keyword_embed.json"
 
