@@ -1,0 +1,153 @@
+.selected-controls-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 14px 20px;
+  background: #EEF2FF;
+  border: 1px solid #C7D2FE;
+  flex-wrap: wrap;
+}
+
+.bar-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #4F46E5;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bar-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.bar-chip {
+  background: white;
+  border: 1.5px solid #C7D2FE;
+  color: #4F46E5;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.upload-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.upload-card {
+  border: 2px solid #E2E8F0;
+  transition: all 0.2s;
+}
+
+.upload-card.upload-done {
+  border-color: #86EFAC;
+  background: #F0FDF4;
+}
+
+.upload-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.upload-control-num {
+  background: #0F172A;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-right: 8px;
+}
+
+.upload-control-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.drop-zone {
+  border: 2px dashed #CBD5E1;
+  border-radius: 10px;
+  padding: 28px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #FAFAFA;
+}
+
+.drop-zone:hover,
+.drop-zone.drag-over {
+  border-color: #6366F1;
+  background: #EEF2FF;
+}
+
+.drop-zone.drop-done {
+  border-color: #86EFAC;
+  border-style: solid;
+  background: #F0FDF4;
+}
+
+.drop-empty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.drop-done-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.drop-icon {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.done-icon { font-size: 1.8rem; }
+
+.drop-filename {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #15803D;
+  word-break: break-all;
+}
+
+.drop-replace {
+  font-size: 0.75rem;
+  color: #94A3B8;
+}
+
+.drop-text {
+  font-size: 0.85rem;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.drop-hint {
+  font-size: 0.75rem;
+  color: #94A3B8;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #1E293B;
+  font-weight: 500;
+}
+
+.progress-num {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #4F46E5;
+}

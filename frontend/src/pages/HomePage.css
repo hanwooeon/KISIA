@@ -1,0 +1,165 @@
+.home-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 40px 32px;
+  gap: 0;
+}
+
+.home-center {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* 로고 */
+.home-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.home-logo-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #4F46E5, #818CF8);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: white;
+  box-shadow: 0 8px 24px rgba(79,70,229,0.4);
+}
+
+.home-logo-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #0F172A;
+  letter-spacing: -0.5px;
+}
+
+.home-logo-sub {
+  font-size: 0.82rem;
+  color: #64748B;
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+/* 상태 카드 */
+.home-status-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.home-stat-card {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 16px 12px;
+  text-align: center;
+  border: 1px solid rgba(99,102,241,0.1);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.home-stat-val {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #4F46E5;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.home-stat-label {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 구분선 */
+.home-divider {
+  width: 100%;
+  height: 1px;
+  background: #E2E8F0;
+  margin-bottom: 24px;
+}
+
+/* 설명 */
+.home-desc {
+  font-size: 0.88rem;
+  color: #64748B;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* 시작 버튼 */
+.home-start-btn {
+  width: 100%;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #4F46E5, #6366F1);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(79,70,229,0.4);
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+  margin-bottom: 12px;
+}
+
+.home-start-btn:hover {
+  background: linear-gradient(135deg, #4338CA, #4F46E5);
+  box-shadow: 0 6px 28px rgba(79,70,229,0.5);
+  transform: translateY(-2px);
+}
+
+.home-start-arrow {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* 내역 버튼 */
+.home-history-btn {
+  width: 100%;
+  padding: 12px 32px;
+  background: white;
+  color: #4F46E5;
+  border: 1.5px solid #C7D2FE;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.home-history-btn:hover {
+  background: #EEF2FF;
+  border-color: #A5B4FC;
+}
+
+/* 하단 */
+.home-footer-info {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.68rem;
+  color: #CBD5E1;
+  font-weight: 500;
+}
