@@ -8,6 +8,9 @@ _TABLE_ROW = re.compile(r'^\|(.+)\|$')
 _HEADING = re.compile(r'^\*\*\d+\.\s+.+\*\*$|^#{1,3}\s+.+')
 _ARTICLE_HEADING = re.compile(r'^#{1,6}\s+(\d+)\.\s+(.+)')
 _SUBSECTION_HEADING = re.compile(r'^#{1,6}\s+([가나다라마바사아자차카타파하])\s*\.\s+(.+)')
+_ARTICLE_HEADING_PLAIN = re.compile(r'^(\d+)\.\s+(.+)')
+_SUBSECTION_HEADING_PLAIN = re.compile(r'^([가나다라마바사아자차카타파하])\s*\.\s+(.+)')
+_HEADING_LABELS = {'section_header', 'title', 'page_header'}
 
 IMAGE_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.tiff'}
 
@@ -53,7 +56,7 @@ def _chunk_structured(text: str, source: str) -> list[dict]:
 
             row = dict(zip(headers, cells))
             chunks.append({
-                'chunk_id': chunk_id,
+                'chunk_id': f"{Path(source).stem}-{chunk_id:04d}",
                 'source': source,
                 'inspection_date': current_date,
                 'inspection_area': current_area,
@@ -115,7 +118,7 @@ def _chunk_flat_table(text: str, source: str) -> list[dict]:
             parts.append(f"조치내용: {row['조치내용']}")
 
         chunks.append({
-            'chunk_id': chunk_id,
+            'chunk_id': f"{Path(source).stem}-{chunk_id:04d}",
             'source': source,
             'inspection_date': date,
             'inspection_area': area,
@@ -148,7 +151,7 @@ def _chunk_general_document(text: str, source: str) -> list[dict]:
         content = '\n'.join(current_lines).strip()
         if content:
             chunk: dict = {
-                'chunk_id': chunk_id,
+                'chunk_id': f"{Path(source).stem}-{chunk_id:04d}",
                 'source': source,
                 'section': current_section,
                 'content': content,
@@ -204,7 +207,7 @@ def _chunk_plain_text(text: str, source: str) -> list[dict]:
         content = '\n'.join(current_lines).strip()
         if content:
             chunks.append({
-                'chunk_id': chunk_id,
+                'chunk_id': f"{Path(source).stem}-{chunk_id:04d}",
                 'source': source,
                 'section': current_section,
                 'content': content,
@@ -227,9 +230,83 @@ def _chunk_plain_text(text: str, source: str) -> list[dict]:
     return chunks
 
 
+# ── 형식 5: Docling 요소 기반 (일반 문서 - 메타데이터 포함) ────────────────
+
+def _chunk_from_elements(elements: list[dict], source: str) -> list[dict]:
+    chunks = []
+    chunk_id = 1
+    current_section = '본문'
+    current_article_no = ''
+    current_article_title = ''
+    current_subsection = ''
+    current_lines: list[str] = []
+    current_start_page: int | None = None
+    current_elem_types: set[str] = set()
+
+    def flush():
+        nonlocal chunk_id
+        content = '\n'.join(current_lines).strip()
+        if not content:
+            current_lines.clear()
+            current_elem_types.clear()
+            return
+        chunk: dict = {
+            'chunk_id': f"{Path(source).stem}-{chunk_id:04d}",
+            'source': source,
+            'section': current_section,
+            'content': content,
+            'element_type': 'list' if 'list_item' in current_elem_types else 'paragraph',
+        }
+        if current_start_page is not None:
+            chunk['page_no'] = current_start_page
+        if current_article_no:
+            chunk['article_no'] = current_article_no
+            chunk['article_title'] = current_article_title
+        if current_subsection:
+            chunk['subsection'] = current_subsection
+        chunks.append(chunk)
+        chunk_id += 1
+        current_lines.clear()
+        current_elem_types.clear()
+
+    for elem in elements:
+        label = elem.get('label', 'text')
+        text = elem.get('text', '').strip()
+        page_no = elem.get('page_no')
+        if not text:
+            continue
+
+        if label in _HEADING_LABELS:
+            if current_lines:
+                flush()
+            article_m = _ARTICLE_HEADING_PLAIN.match(text)
+            subsection_m = _SUBSECTION_HEADING_PLAIN.match(text)
+            if article_m:
+                current_article_no = article_m.group(1)
+                current_article_title = article_m.group(2).strip()
+                current_section = f"{current_article_no}. {current_article_title}"
+                current_subsection = ''
+            elif subsection_m:
+                # section은 조항 레벨 유지, subsection에 소제목 전체 저장
+                current_subsection = text
+            else:
+                current_section = text
+                current_article_no = ''
+                current_subsection = ''
+            current_start_page = page_no
+        else:
+            if not current_lines:
+                current_start_page = page_no
+            current_elem_types.add(label)
+            current_lines.append(text)
+
+    flush()
+    return chunks
+
+
 # ── 형식 자동 감지 ────────────────────────────────────────────────────────
 
-def chunk_markdown(text: str, source: str) -> list[dict]:
+def chunk_markdown(text: str, source: str, elements: list[dict] | None = None) -> list[dict]:
     ext = Path(source).suffix.lower()
 
     if ext in IMAGE_EXTENSIONS:
@@ -244,7 +321,9 @@ def chunk_markdown(text: str, source: str) -> list[dict]:
     if re.search(r'^## ', text, re.MULTILINE) and '점검항목' in text:
         return _chunk_structured(text, source)
 
-    # 그 외 일반 문서
+    # 그 외 일반 문서: Docling 요소가 있으면 메타데이터 포함 청킹
+    if elements:
+        return _chunk_from_elements(elements, source)
     return _chunk_general_document(text, source)
 
 

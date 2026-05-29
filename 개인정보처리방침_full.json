@@ -1,353 +1,485 @@
 [
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0001",
-    "source": "개인정보처리방침.pdf",
-    "section": "개인정보 처리방침",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "문서번호 : BL-EVD-311-03  | 시행일자 : 2025. 01. 01.  | 버전 : v1.0\n( 주 ) 배워볼 LANG( 이하 \" 회사 \" ) 은 「 개인정보 보호법 」 및 관계 법령이 정한 바를 준수하며 , 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다 . 이에 「 개인정보 보호법 」 제 30 조에 따라 이용자에게 개인정보 처리에 관한 절차 및 기준을 안내하고 , 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이 개인정보 처리방침을 수립 · 공개합니다 .",
-    "element_type": "paragraph",
-    "page_no": 1
+    "metadata": {
+      "section": "개인정보 처리방침",
+      "element_type": "paragraph",
+      "page_no": 1
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0002",
-    "source": "개인정보처리방침.pdf",
-    "section": "▶ 목차",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "개인정보의 처리 목적 및 수집 항목\n개인정보의 보유 및 이용기간\n만 14 세 미만 아동의 개인정보 처리\n개인정보 제 3 자 제공\n개인정보 처리의 위탁\n개인정보의 파기 절차 및 방법\n이용자와 법정대리인의 권리 및 행사방법\n개인정보의 안전성 확보조치\n개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항\n개인정보 보호책임자\n권익침해 구제방법\n개인정보 처리방침의 변경",
-    "element_type": "list",
-    "page_no": 1
+    "metadata": {
+      "section": "▶ 목차",
+      "element_type": "list",
+      "page_no": 1
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0003",
-    "source": "개인정보처리방침.pdf",
-    "section": "1. 개인정보의 처리 목적 및 수집 항목",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 개인정보를 수집하는 경우 「 개인정보 보호법 」 제 15 조 제 1 항 1 호 ( 정보주체의 동의 ) 에 따라 정보주체의 동의를 받아 처리하거나 , 별도의 법령상 근거가 있는 경우 동의 없이 처리하고 있습니다 .",
-    "element_type": "paragraph",
-    "page_no": 1,
-    "article_no": "1",
-    "article_title": "개인정보의 처리 목적 및 수집 항목",
-    "subsection": "가 . 처리 목적 및 수집 항목"
+    "metadata": {
+      "section": "1. 개인정보의 처리 목적 및 수집 항목",
+      "element_type": "paragraph",
+      "page_no": 1,
+      "article_no": "1",
+      "article_title": "개인정보의 처리 목적 및 수집 항목",
+      "subsection": "가 . 처리 목적 및 수집 항목"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0004",
-    "source": "개인정보처리방침.pdf",
-    "section": "1. 개인정보의 처리 목적 및 수집 항목",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "서비스 이용 과정에서 사업 처리 과정 중 아래와 같은 정보들이 자동으로 생성되어 수집될 수 있습니다 .",
-    "element_type": "paragraph",
-    "page_no": 3,
-    "article_no": "1",
-    "article_title": "개인정보의 처리 목적 및 수집 항목",
-    "subsection": "나 . 자동 생성 · 수집 정보"
+    "metadata": {
+      "section": "1. 개인정보의 처리 목적 및 수집 항목",
+      "element_type": "paragraph",
+      "page_no": 3,
+      "article_no": "1",
+      "article_title": "개인정보의 처리 목적 및 수집 항목",
+      "subsection": "나 . 자동 생성 · 수집 정보"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0005",
-    "source": "개인정보처리방침.pdf",
-    "section": "1. 개인정보의 처리 목적 및 수집 항목",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 사상 · 신념 , 노동조합 · 정당의 가입 · 탈퇴 , 정치적 견해 , 건강 , 성생활 등에 관한 정보 , 유전정보 , 범죄경력 등 민감정보와 여권번호 , 운전면허번호 , 외국인등록번호 등 고유식별정보 ( 주민등록번호 제외 ) 를 수집 · 이용하지 않습니다 . 다만 , 법령에서 구체적으로 처리를 허용하는 경우에는 예외적으로 처리할 수 있으며 , 이 경우 정보주체로부터 별도의\n동의를 받거나 관련 법령에 따릅니다 .",
-    "element_type": "paragraph",
-    "page_no": 3,
-    "article_no": "1",
-    "article_title": "개인정보의 처리 목적 및 수집 항목",
-    "subsection": "다 . 민감정보 및 고유식별정보 처리 제한"
+    "metadata": {
+      "section": "1. 개인정보의 처리 목적 및 수집 항목",
+      "element_type": "paragraph",
+      "page_no": 3,
+      "article_no": "1",
+      "article_title": "개인정보의 처리 목적 및 수집 항목",
+      "subsection": "다 . 민감정보 및 고유식별정보 처리 제한"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0006",
-    "source": "개인정보처리방침.pdf",
-    "section": "2. 개인정보의 보유 및 이용기간",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 개인정보 보유기간의 경과 , 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다 .",
-    "element_type": "paragraph",
-    "page_no": 3,
-    "article_no": "2",
-    "article_title": "개인정보의 보유 및 이용기간"
+    "metadata": {
+      "section": "2. 개인정보의 보유 및 이용기간",
+      "element_type": "paragraph",
+      "page_no": 3,
+      "article_no": "2",
+      "article_title": "개인정보의 보유 및 이용기간"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0007",
-    "source": "개인정보처리방침.pdf",
-    "section": "2. 개인정보의 보유 및 이용기간",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "관계 법령에 따라 일정 기간 보관 후 개인정보를 파기하는 경우는 아래와 같습니다 .\n나 . 보유기간 경과 또는 처리목적 달성에 따른 파기\n-회원 가입 및 관리 : 회원 탈퇴 시까지\n-유료 서비스 결제 : 서비스 제공 완료 후 관계 법령에 따른 기간\n-고객 상담 : 분쟁 예방 및 해결을 위해 3 년간 보관 후 파기 ( 전자상거래법 )\n-마케팅 및 광고 : 회원 탈퇴 시까지 또는 동의 철회 시까지\n-이벤트 참여 : 이벤트 종료 후 최대 1 년간 보관 ( 이벤트마다 상이하며 , 이벤트 진행 시 기재된 기간을 우선합니다 )\n-임직원 인사 · 급여 : 퇴직 후 3 년",
-    "element_type": "list",
-    "page_no": 3,
-    "article_no": "2",
-    "article_title": "개인정보의 보유 및 이용기간",
-    "subsection": "가 . 관계 법령에 따른 보관"
+    "metadata": {
+      "section": "2. 개인정보의 보유 및 이용기간",
+      "element_type": "list",
+      "page_no": 3,
+      "article_no": "2",
+      "article_title": "개인정보의 보유 및 이용기간",
+      "subsection": "가 . 관계 법령에 따른 보관"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0008",
-    "source": "개인정보처리방침.pdf",
-    "section": "3. 만 14 세 미만 아동의 개인정보 처리",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 만 14 세 미만 아동 ( 이하 ' 아동 ') 이 제공한 개인정보로 인하여 아동 및 법정대리인이 불이익을 입지 않도록 보호 조치를 취하고 있습니다 .",
-    "element_type": "paragraph",
-    "page_no": 4,
-    "article_no": "3",
-    "article_title": "만 14 세 미만 아동의 개인정보 처리",
-    "subsection": "가 . 아동 개인정보 보호 원칙"
+    "metadata": {
+      "section": "3. 만 14 세 미만 아동의 개인정보 처리",
+      "element_type": "paragraph",
+      "page_no": 4,
+      "article_no": "3",
+      "article_title": "만 14 세 미만 아동의 개인정보 처리",
+      "subsection": "가 . 아동 개인정보 보호 원칙"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0009",
-    "source": "개인정보처리방침.pdf",
-    "section": "3. 만 14 세 미만 아동의 개인정보 처리",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 아동의 개인정보에 대하여 아래의 행위를 하는 경우 해당 아동의 법정대리인의 동의를 받습니다 .\n-아동의 서비스 가입을 위한 개인정보 수집 또는 가입 시 고지한 범위를 넘어 이용 · 제 3 자 제공하는 경우\n-아동의 개인정보를 제공받은 자가 제공받은 목적 외의 용도로 이용하거나 제 3 자에게 제공하는 경우",
-    "element_type": "list",
-    "page_no": 4,
-    "article_no": "3",
-    "article_title": "만 14 세 미만 아동의 개인정보 처리",
-    "subsection": "나 . 법정대리인 동의 대상"
+    "metadata": {
+      "section": "3. 만 14 세 미만 아동의 개인정보 처리",
+      "element_type": "list",
+      "page_no": 4,
+      "article_no": "3",
+      "article_title": "만 14 세 미만 아동의 개인정보 처리",
+      "subsection": "나 . 법정대리인 동의 대상"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0010",
-    "source": "개인정보처리방침.pdf",
-    "section": "3. 만 14 세 미만 아동의 개인정보 처리",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 법정대리인 동의를 얻기 위하여 최소한의 정보 ( 이름 , 생년월일 , 휴대전화번호 ) 를 수집할 수 있으며 , 동의 확인 완료 후 해당 정보는 삭제합니다 .\n-동의 확인 방법 : 생년월일 확인 → 법정대리인 성명 · 연락처 수집 → SMS 본인인증 (OTP)\n-법정대리인은 아동의 개인정보에 대한 열람 , 정정 · 삭제 , 처리정지 요구권을 행사할 수 있습니다 .",
-    "element_type": "list",
-    "page_no": 4,
-    "article_no": "3",
-    "article_title": "만 14 세 미만 아동의 개인정보 처리",
-    "subsection": "다 . 법정대리인 동의 확인 방법"
+    "metadata": {
+      "section": "3. 만 14 세 미만 아동의 개인정보 처리",
+      "element_type": "list",
+      "page_no": 4,
+      "article_no": "3",
+      "article_title": "만 14 세 미만 아동의 개인정보 처리",
+      "subsection": "다 . 법정대리인 동의 확인 방법"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0011",
-    "source": "개인정보처리방침.pdf",
-    "section": "4. 개인정보 제 3 자 제공",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 원칙적으로 이용자의 개인정보를 수집 · 이용 목적으로 명시한 범위 내에서만 처리하며 , 제 3 자에게 않습니다 . 다만 , 다음의 경우에는 이용자의 동의 없이 개인정보를 이용하거나 제 3 자에게 제공할 수 있습니다 .\n-법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한\n경우\n-이용자와 체결한 계약을 이행하거나 계약 체결 과정에서 이용자의 요청에 따른 조치를 이행하기 위하여 필요한 경우\n-명백히 이용자 또는 제 3 자의 급박한 생명 · 신체 · 재산의 이익을 위하여 필요하다고 인정되는 경우\n-회사의 정당한 이익을 달성하기 위하여 필요한 경우로서 명백하게 이용자의 권리보다 우선하는 경우 . 이 경우\n회사의 정당한 이익과 상당한 관련이 있고 합리적인 범위를 초과하지 않는 경우\n-공중위생 등 공공의 안전과 안녕을 위하여 긴급히 필요한",
-    "element_type": "list",
-    "page_no": 4,
-    "article_no": "4",
-    "article_title": "개인정보 제 3 자 제공"
+    "metadata": {
+      "section": "4. 개인정보 제 3 자 제공",
+      "element_type": "list",
+      "page_no": 4,
+      "article_no": "4",
+      "article_title": "개인정보 제 3 자 제공"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0012",
-    "source": "개인정보처리방침.pdf",
-    "section": "5. 개인정보 처리의 위탁",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "경우\n제공하지",
-    "element_type": "list",
-    "page_no": 4,
-    "article_no": "5",
-    "article_title": "개인정보 처리의 위탁"
+    "metadata": {
+      "section": "5. 개인정보 처리의 위탁",
+      "element_type": "list",
+      "page_no": 4,
+      "article_no": "5",
+      "article_title": "개인정보 처리의 위탁"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0013",
-    "source": "개인정보처리방침.pdf",
-    "section": "5. 개인정보 처리의 위탁",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 원활한 개인정보 업무 처리를 위하여 다음과 같이 개인정보 처리 업무를 위탁하고 있습니다 .",
-    "element_type": "paragraph",
-    "page_no": 5,
-    "article_no": "5",
-    "article_title": "개인정보 처리의 위탁",
-    "subsection": "가 . 수탁업체 현황"
+    "metadata": {
+      "section": "5. 개인정보 처리의 위탁",
+      "element_type": "paragraph",
+      "page_no": 5,
+      "article_no": "5",
+      "article_title": "개인정보 처리의 위탁",
+      "subsection": "가 . 수탁업체 현황"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0014",
-    "source": "개인정보처리방침.pdf",
-    "section": "5. 개인정보 처리의 위탁",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 위탁계약 체결 시 「 개인정보 보호법 」 제 26 조에 따라 위탁업무 수행 목적 외 개인정보 처리 금지 , 기술적 · 관리적 보호조치 , 재위탁 제한 , 수탁자에 대한 관리 · 감독 , 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고 , 수탁자가 개인정보를 안전하게 처리하는지 감독하고 있습니다 .",
-    "element_type": "paragraph",
-    "page_no": 5,
-    "article_no": "5",
-    "article_title": "개인정보 처리의 위탁",
-    "subsection": "나 . 위탁 계약 관리"
+    "metadata": {
+      "section": "5. 개인정보 처리의 위탁",
+      "element_type": "paragraph",
+      "page_no": 5,
+      "article_no": "5",
+      "article_title": "개인정보 처리의 위탁",
+      "subsection": "나 . 위탁 계약 관리"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0015",
-    "source": "개인정보처리방침.pdf",
-    "section": "5. 개인정보 처리의 위탁",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하겠습니다 .",
-    "element_type": "paragraph",
-    "page_no": 5,
-    "article_no": "5",
-    "article_title": "개인정보 처리의 위탁",
-    "subsection": "다 . 변경 고지"
+    "metadata": {
+      "section": "5. 개인정보 처리의 위탁",
+      "element_type": "paragraph",
+      "page_no": 5,
+      "article_no": "5",
+      "article_title": "개인정보 처리의 위탁",
+      "subsection": "다 . 변경 고지"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0016",
-    "source": "개인정보처리방침.pdf",
-    "section": "6. 개인정보의 파기 절차 및 방법",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 개인정보 보유기간의 경과 , 처리 목적 달성 등 개인정보가 불필요하게 되었을 때 지체없이 해당 개인정보를 파기합니다 . 다른 법령에 따라 계속 보존하여야 하는 경우에는 별도의 데이터베이스 (DB) 로 옮기거나 보관 장소를 달리하여 보존합니다 .",
-    "element_type": "paragraph",
-    "page_no": 5,
-    "article_no": "6",
-    "article_title": "개인정보의 파기 절차 및 방법",
-    "subsection": "가 . 파기 원칙"
+    "metadata": {
+      "section": "6. 개인정보의 파기 절차 및 방법",
+      "element_type": "paragraph",
+      "page_no": 5,
+      "article_no": "6",
+      "article_title": "개인정보의 파기 절차 및 방법",
+      "subsection": "가 . 파기 원칙"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0017",
-    "source": "개인정보처리방침.pdf",
-    "section": "6. 개인정보의 파기 절차 및 방법",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "개인정보파일의 처리 목적 달성 , 해당 서비스의 폐지 , 사업의 종료 등으로 개인정보파일이 불필요하게 되었을 때에는 개인정보의 처리가 불필요한 것으로 인정되는 날로부터 지체없이 해당 개인정보파일을 파기합니다 .",
-    "element_type": "paragraph",
-    "page_no": 5,
-    "article_no": "6",
-    "article_title": "개인정보의 파기 절차 및 방법",
-    "subsection": "나 . 파기 절차"
+    "metadata": {
+      "section": "6. 개인정보의 파기 절차 및 방법",
+      "element_type": "paragraph",
+      "page_no": 5,
+      "article_no": "6",
+      "article_title": "개인정보의 파기 절차 및 방법",
+      "subsection": "나 . 파기 절차"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0018",
-    "source": "개인정보처리방침.pdf",
-    "section": "6. 개인정보의 파기 절차 및 방법",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "-전자적 파일 형태로 저장된 개인정보 : 복구 · 재생이 불가능한 기술적 방법으로 영구 삭제 (3 회 이상 덮어쓰기 또는 암호화 후 키 폐기 )\n-문서 ( 종이 ) 로 출력된 개인정보 : 파쇄기를 이용한 파쇄 또는 소각",
-    "element_type": "list",
-    "page_no": 5,
-    "article_no": "6",
-    "article_title": "개인정보의 파기 절차 및 방법",
-    "subsection": "다 . 파기 방법"
+    "metadata": {
+      "section": "6. 개인정보의 파기 절차 및 방법",
+      "element_type": "list",
+      "page_no": 5,
+      "article_no": "6",
+      "article_title": "개인정보의 파기 절차 및 방법",
+      "subsection": "다 . 파기 방법"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0019",
-    "source": "개인정보처리방침.pdf",
-    "section": "7. 이용자와 법정대리인의 권리 및 행사방법",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "이용자와 법정대리인은 언제든지 다음 각 호의 사항에 관하여 개인정보 열람 · 정정 · 삭제 · 처리 정지를 요구할 수 있습니다 .\n-회사가 보유하고 있는 이용자의 개인정보\n-회사가 이용자의 개인정보를 이용하거나 제 3 자에게 제공한 내역\n-회사에게 개인정보 수집 · 이용 · 제공 등의 동의를 한 내역",
-    "element_type": "list",
-    "page_no": 5,
-    "article_no": "7",
-    "article_title": "이용자와 법정대리인의 권리 및 행사방법",
-    "subsection": "가 . 권리의 종류"
+    "metadata": {
+      "section": "7. 이용자와 법정대리인의 권리 및 행사방법",
+      "element_type": "list",
+      "page_no": 5,
+      "article_no": "7",
+      "article_title": "이용자와 법정대리인의 권리 및 행사방법",
+      "subsection": "가 . 권리의 종류"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0020",
-    "source": "개인정보처리방침.pdf",
-    "section": "7. 이용자와 법정대리인의 권리 및 행사방법",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "이용자는 서비스 내 [ 마이페이지 ]-[ 회원정보수정 ] 메뉴에서 직접 자신의 정보를 열람 · 정정할 수 있으며 , 별도로 개인정보보호 책임자에게 서면 · 전화 · 전자우편 등을 통하여 개인정보의 열람 · 정정을 요청할 수 있습니다 .",
-    "element_type": "paragraph",
-    "page_no": 6,
-    "article_no": "7",
-    "article_title": "이용자와 법정대리인의 권리 및 행사방법",
-    "subsection": "나 . 열람 · 정정"
+    "metadata": {
+      "section": "7. 이용자와 법정대리인의 권리 및 행사방법",
+      "element_type": "paragraph",
+      "page_no": 6,
+      "article_no": "7",
+      "article_title": "이용자와 법정대리인의 권리 및 행사방법",
+      "subsection": "나 . 열람 · 정정"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0021",
-    "source": "개인정보처리방침.pdf",
-    "section": "7. 이용자와 법정대리인의 권리 및 행사방법",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "이용자와 법정대리인은 언제든지 자신의 개인정보 처리의 정지를 요구할 수 있습니다 . 다만 , 「 개인정보 보호법 」 제 37 조 제 2 항에 해당하는 경우에는 처리 정지 요구를 거절할 수 있습니다 .",
-    "element_type": "paragraph",
-    "page_no": 6,
-    "article_no": "7",
-    "article_title": "이용자와 법정대리인의 권리 및 행사방법",
-    "subsection": "다 . 처리 정지 요구"
+    "metadata": {
+      "section": "7. 이용자와 법정대리인의 권리 및 행사방법",
+      "element_type": "paragraph",
+      "page_no": 6,
+      "article_no": "7",
+      "article_title": "이용자와 법정대리인의 권리 및 행사방법",
+      "subsection": "다 . 처리 정지 요구"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0022",
-    "source": "개인정보처리방침.pdf",
-    "section": "7. 이용자와 법정대리인의 권리 및 행사방법",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "이용자와 법정대리인은 언제든지 회원가입 시 개인정보의 수집 · 이용 · 제공 등에 대해 동의한 의사표시를 철회 ( 회원 탈퇴 ) 할 수 있습니다 . 동의 철회는 서비스 내 [ 마이페이지 ]-[ 탈퇴 신청 ] 메뉴에서 본인 확인 절차를 거친 후 직접 신청하거나 , 개인정보보호책임자에게 서면 · 전화 · 전자우편 등으로 연락하시면 지체없이 필요한 조치를 취하겠습니다 . 단 , 관계 법령에 따라 최소한의 정보는 일정 기간 보관됩니다 .",
-    "element_type": "paragraph",
-    "page_no": 6,
-    "article_no": "7",
-    "article_title": "이용자와 법정대리인의 권리 및 행사방법",
-    "subsection": "라 . 동의 철회 ( 회원 탈퇴 )"
+    "metadata": {
+      "section": "7. 이용자와 법정대리인의 권리 및 행사방법",
+      "element_type": "paragraph",
+      "page_no": 6,
+      "article_no": "7",
+      "article_title": "이용자와 법정대리인의 권리 및 행사방법",
+      "subsection": "라 . 동의 철회 ( 회원 탈퇴 )"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0023",
-    "source": "개인정보처리방침.pdf",
-    "section": "8. 개인정보의 안전성 확보조치",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 「 개인정보 보호법 」 제 29 조에 따라 다음과 같이 안전성 확보에 필요한 물리적 · 관리적 · 기술적 조치를 하고 있습니다 .",
-    "element_type": "paragraph",
-    "page_no": 6,
-    "article_no": "8",
-    "article_title": "개인정보의 안전성 확보조치",
-    "subsection": "가 . 안전성 확보 조치"
+    "metadata": {
+      "section": "8. 개인정보의 안전성 확보조치",
+      "element_type": "paragraph",
+      "page_no": 6,
+      "article_no": "8",
+      "article_title": "개인정보의 안전성 확보조치",
+      "subsection": "가 . 안전성 확보 조치"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0024",
-    "source": "개인정보처리방침.pdf",
-    "section": "8. 개인정보의 안전성 확보조치",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "-개인정보보호 교육 : 개인정보를 취급하는 임직원을 대상으로 연 1 회 이상 정기 교육 실시\n-정보보호 관리체계 : ISMS-P 인증 취득을 위한 관리체계 수립 · 운영 중",
-    "element_type": "list",
-    "page_no": 7,
-    "article_no": "8",
-    "article_title": "개인정보의 안전성 확보조치",
-    "subsection": "나 . 추가 활동"
+    "metadata": {
+      "section": "8. 개인정보의 안전성 확보조치",
+      "element_type": "list",
+      "page_no": 7,
+      "article_no": "8",
+      "article_title": "개인정보의 안전성 확보조치",
+      "subsection": "나 . 추가 활동"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0025",
-    "source": "개인정보처리방침.pdf",
-    "section": "9. 개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 이용자의 정보를 수시로 저장하고 불러오는 ' 쿠키 (Cookie)' 를 운용합니다 .",
-    "element_type": "paragraph",
-    "page_no": 7,
-    "article_no": "9",
-    "article_title": "개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항"
+    "metadata": {
+      "section": "9. 개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
+      "element_type": "paragraph",
+      "page_no": 7,
+      "article_no": "9",
+      "article_title": "개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0026",
-    "source": "개인정보처리방침.pdf",
-    "section": "9. 개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "쿠키란 회사의 웹사이트를 운영하는 서버가 이용자의 브라우저에 보내는 아주 작은 텍스트 파일로서 이용자의 컴퓨터 하드디스크에 저장됩니다 .",
-    "element_type": "paragraph",
-    "page_no": 7,
-    "article_no": "9",
-    "article_title": "개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
-    "subsection": "가 . 쿠키란 ?"
+    "metadata": {
+      "section": "9. 개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
+      "element_type": "paragraph",
+      "page_no": 7,
+      "article_no": "9",
+      "article_title": "개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
+      "subsection": "가 . 쿠키란 ?"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0027",
-    "source": "개인정보처리방침.pdf",
-    "section": "9. 개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "이용자의 접속 빈도 , 방문 시간 분석 및 이용자의 관심 분야를 파악하여 개인 맞춤 서비스를 제공합니다 . 쿠키 설치에 대한 선택권은 이용자가 가지고 있으며 , 웹브라우저 설정을 통해 모든 쿠키를 허용하거나 거부할 수 있습니다 .",
-    "element_type": "paragraph",
-    "page_no": 7,
-    "article_no": "9",
-    "article_title": "개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
-    "subsection": "나 . 쿠키 사용 목적"
+    "metadata": {
+      "section": "9. 개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
+      "element_type": "paragraph",
+      "page_no": 7,
+      "article_no": "9",
+      "article_title": "개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
+      "subsection": "나 . 쿠키 사용 목적"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0028",
-    "source": "개인정보처리방침.pdf",
-    "section": "9. 개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "Internet Explorer:\n도구 메뉴 > 인터넷 옵션 > 개인정보 탭 > 고급 개인정보 설정\n-\nMicrosoft Edge: 설정 > 쿠키 및 사이트 권한 > 쿠키 및 사이트 데이터 관리 및 삭제\nChrome: 설정 > 개인정보 및 보안 > 쿠키 및 사이트 데이터\nFirefox: 설정 > 개인정보 및 보안 > 향상된 추적 방지 기능 > 사용자 지정\n※ 이용자가 쿠키 설치를 거부하였을 경우 서비스 제공에 어려움이 있을 수 있습니다 .",
-    "element_type": "list",
-    "page_no": 7,
-    "article_no": "9",
-    "article_title": "개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
-    "subsection": "다 . 쿠키 설정 거부 방법"
+    "metadata": {
+      "section": "9. 개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
+      "element_type": "list",
+      "page_no": 7,
+      "article_no": "9",
+      "article_title": "개인정보 자동수집 장치의 설치 · 운영 및 거부에 관한 사항",
+      "subsection": "다 . 쿠키 설정 거부 방법"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0029",
-    "source": "개인정보처리방침.pdf",
-    "section": "10. 개인정보 보호책임자",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고 , 개인정보 처리와 관련한 이용자의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다 .\n이용자는 서비스를 이용하면서 발생한 모든 개인정보 보호 관련 문의 , 열람청구 , 불만처리 , 피해구제 등에 관한 사항을 개인정보보호책임자 및 담당부서로 문의하실 수 있습니다 . 회사는 이용자의 문의에 대해 지체없이 답변 및 처리해드릴 것입니다 .",
-    "element_type": "paragraph",
-    "page_no": 7,
-    "article_no": "10",
-    "article_title": "개인정보 보호책임자"
+    "metadata": {
+      "section": "10. 개인정보 보호책임자",
+      "element_type": "paragraph",
+      "page_no": 7,
+      "article_no": "10",
+      "article_title": "개인정보 보호책임자"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0030",
-    "source": "개인정보처리방침.pdf",
-    "section": "11. 권익침해 구제방법",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "이용자는 개인정보침해로 인한 구제를 받기 위하여 아래 기관에 분쟁해결이나 상담 등을 신청할 수 있습니다 .\n-개인정보분쟁조정위원회 : ( 국번없이 ) 1833-6972  (www.kopico.go.kr)\n-개인정보침해신고센터 : ( 국번없이 ) 118  (privacy.kisa.or.kr)\n-대검찰청 사이버범죄수사단 : ( 국번없이 ) 1301  (www.spo.go.kr)\n-경찰청 사이버안전국 : ( 국번없이 ) 182  (ecrm.cyber.go.kr)",
-    "element_type": "list",
-    "page_no": 8,
-    "article_no": "11",
-    "article_title": "권익침해 구제방법",
-    "subsection": "가 . 외부 기관 이용"
+    "metadata": {
+      "section": "11. 권익침해 구제방법",
+      "element_type": "list",
+      "page_no": 8,
+      "article_no": "11",
+      "article_title": "권익침해 구제방법",
+      "subsection": "가 . 외부 기관 이용"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0031",
-    "source": "개인정보처리방침.pdf",
-    "section": "11. 권익침해 구제방법",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "-부서명\n: 경영지원부문 정보보안팀\n-이메일 : jeonboboho@baewobollang.com\n-연락처 : 02-595-9244",
-    "element_type": "list",
-    "page_no": 8,
-    "article_no": "11",
-    "article_title": "권익침해 구제방법",
-    "subsection": "나 . 회사 내부 문의"
+    "metadata": {
+      "section": "11. 권익침해 구제방법",
+      "element_type": "list",
+      "page_no": 8,
+      "article_no": "11",
+      "article_title": "권익침해 구제방법",
+      "subsection": "나 . 회사 내부 문의"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0032",
-    "source": "개인정보처리방침.pdf",
-    "section": "12. 개인정보 처리방침의 변경",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "가 . 회사는 개인정보 처리방침을 개정하는 경우 최소 7 일 전에 홈페이지의 공지사항을 통하여 고지할 것입니다 .\n나 . 이 개인정보 처리방침은 2025 년 01 월 01 일부터 적용됩니다 .",
-    "element_type": "list",
-    "page_no": 8,
-    "article_no": "12",
-    "article_title": "개인정보 처리방침의 변경"
+    "metadata": {
+      "section": "12. 개인정보 처리방침의 변경",
+      "element_type": "list",
+      "page_no": 8,
+      "article_no": "12",
+      "article_title": "개인정보 처리방침의 변경"
+    },
+    "user_selection": null
   },
   {
+    "inspection_no": 1,
     "chunk_id": "개인정보처리방침-0033",
-    "source": "개인정보처리방침.pdf",
-    "section": "12. 개인정보 처리방침의 변경",
+    "evidence_name": "개인정보처리방침.pdf",
     "content": "공고일\n: 2024 년 12 월 01 일\n시행일\n: 2025 년 01 월 01 일\n( 주 ) 배워볼 LANG 대표이사 김밤티\n(",
-    "element_type": "paragraph",
-    "page_no": 8,
-    "article_no": "12",
-    "article_title": "개인정보 처리방침의 변경",
-    "subsection": "다 . 이전 처리방침"
+    "metadata": {
+      "section": "12. 개인정보 처리방침의 변경",
+      "element_type": "paragraph",
+      "page_no": 8,
+      "article_no": "12",
+      "article_title": "개인정보 처리방침의 변경",
+      "subsection": "다 . 이전 처리방침"
+    },
+    "user_selection": null
   }
 ]
