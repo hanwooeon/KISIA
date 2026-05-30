@@ -18,6 +18,9 @@ env/
 *.log
 kisia_temp_store.json
 
+# 로그 파일
+logs/
+
 # IDE
 .vscode/
 .idea/

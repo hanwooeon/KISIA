@@ -4,6 +4,7 @@ import uuid
 import json
 import tempfile
 from fastapi import APIRouter, UploadFile, File, Form
+from loguru import logger
 
 router = APIRouter()
 

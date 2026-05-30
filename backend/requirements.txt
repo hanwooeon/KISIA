@@ -7,3 +7,4 @@ openai
 numpy
 FlagEmbedding
 docling
+loguru

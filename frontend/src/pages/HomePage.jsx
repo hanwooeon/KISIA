@@ -19,7 +19,7 @@ export default function HomePage({ lastAnalysis }) {
           <div className="home-logo-icon">K</div>
           <div className="home-logo-texts">
             <div className="home-logo-title">KISIA ISMS-P</div>
-            <div className="home-logo-sub">증적 자동 점검 시스템</div>
+            <div className="home-logo-sub">증적 자동 점검 도구</div>
           </div>
         </div>
 
@@ -53,12 +53,12 @@ export default function HomePage({ lastAnalysis }) {
         {/* 메인 버튼 */}
         <button className="home-start-btn" onClick={() => navigate('/select')}>
           <span>점검 시작하기</span>
-          <span className="home-start-arrow">▶</span>
+          <span className="home-start-arrow">→</span>
         </button>
 
         {lastAnalysis && (
           <button className="home-history-btn" onClick={() => navigate('/history')}>
-            📋 이전 점검 내역 보기
+            이전 점검 내역 보기
           </button>
         )}
       </div>

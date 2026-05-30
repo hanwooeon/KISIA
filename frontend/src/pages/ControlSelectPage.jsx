@@ -1026,13 +1026,13 @@ export default function ControlSelectPage({ onSelectControls }) {
                   <p className="item-guide-summary">{guide.summary}</p>
                   <div className="item-guide-sections">
                     <div className="item-guide-section">
-                      <span className="item-guide-label">🔍 주로 확인하는 것</span>
+                      <span className="item-guide-label">주로 확인하는 것</span>
                       <ul className="item-guide-checklist">
                         {guide.checks.map((c, i) => <li key={i}>{c}</li>)}
                       </ul>
                     </div>
                     <div className="item-guide-section">
-                      <span className="item-guide-label">📁 필요한 문서</span>
+                      <span className="item-guide-label">필요한 문서</span>
                       <div className="item-guide-tags">
                         {guide.evidence.map((e, i) => <span key={i} className="item-guide-tag">{e}</span>)}
                       </div>
