@@ -3,25 +3,40 @@ import { useNavigate } from 'react-router-dom'
 import { downloadFullPDF, downloadItemPDF } from '../utils/generatePDF'
 import './ResultReportPage.css'
 
+// ── 3단계 판정 색상 정의 ──────────────────────────────────────────
+const VERDICT_STYLE = {
+  '적합':      { color: '#059669', bg: '#DCFCE7', border: '#86EFAC', dotColor: '#059669', icon: '✓' },
+  '조건부 적합': { color: '#D97706', bg: '#FEF3C7', border: '#FDE68A', dotColor: '#D97706', icon: '△' },
+  '부적합':    { color: '#DC2626', bg: '#FEE2E2', border: '#FCA5A5', dotColor: '#DC2626', icon: '✕' },
+}
+
+// 히스토리 호환: verdict 필드 없는 구버전 대응
+function getVerdict(r) {
+  if (r.verdict) return r.verdict
+  if (r.overall?.verdict) return r.overall.verdict
+  return r.is_compliant ? '적합' : '부적합'
+}
+
+function getRiskLevel(verdict) {
+  if (verdict === '적합') return 'LOW'
+  if (verdict === '조건부 적합') return 'MEDIUM'
+  return 'HIGH'
+}
+
 const RISK = {
-  LOW:      { label: '양호',   color: '#059669', bg: '#DCFCE7', border: '#86EFAC' },
-  MEDIUM:   { label: '주의',   color: '#D97706', bg: '#FEF3C7', border: '#FDE68A' },
-  HIGH:     { label: '미흡',   color: '#DC2626', bg: '#FEE2E2', border: '#FCA5A5' },
-  CRITICAL: { label: '불량',   color: '#7C2D12', bg: '#FEF2F2', border: '#FECACA' },
+  LOW:    { label: '양호', color: '#059669', bg: '#DCFCE7', border: '#86EFAC' },
+  MEDIUM: { label: '주의', color: '#D97706', bg: '#FEF3C7', border: '#FDE68A' },
+  HIGH:   { label: '미흡', color: '#DC2626', bg: '#FEE2E2', border: '#FCA5A5' },
 }
 
-function getRiskLevel(guide_sim, req_sim, compliant) {
-  if (compliant) return 'LOW'
-  if (guide_sim < 0.6 && req_sim < 0.55) return 'CRITICAL'
-  if (guide_sim < 0.65 || req_sim < 0.58) return 'HIGH'
-  return 'MEDIUM'
-}
-
-function generateDetailedReason(ctrl_name, guide_sim, req_sim, compliant) {
+function generateDetailedReason(ctrl_name, guide_sim, req_sim, verdict) {
   const g = (guide_sim * 100).toFixed(0)
   const r = (req_sim * 100).toFixed(0)
-  if (compliant) {
+  if (verdict === '적합') {
     return `제출된 증적자료는 「${ctrl_name}」 항목의 인증기준을 충족하는 것으로 판단됩니다. 가이드라인 유사도(${g}%)가 기준치(70%)를 상회하고, 필수확인요소 유사도(${r}%)가 기준치(65%)를 만족하여 해당 항목의 이행 여부가 충분히 입증되었습니다.`
+  }
+  if (verdict === '조건부 적합') {
+    return `제출된 증적자료는 「${ctrl_name}」 항목의 핵심 요건을 대체로 충족합니다. 다만 일부 보완을 통해 심사 리스크를 낮출 수 있습니다. 아래 보완 권고사항을 참고하시기 바랍니다.`
   }
   const issues = []
   if (guide_sim < 0.7) issues.push(`가이드라인 유사도(${g}%)가 기준치(70%)에 미달`)
@@ -29,39 +44,66 @@ function generateDetailedReason(ctrl_name, guide_sim, req_sim, compliant) {
   return `제출된 증적자료는 「${ctrl_name}」 항목의 인증기준을 충족하지 못하는 것으로 판단됩니다. ${issues.join(', ')}하여 현재 증적만으로는 해당 항목의 이행 여부를 충분히 입증하기 어렵습니다. 하기 개선 권고사항을 참고하여 증적을 보완하시기 바랍니다.`
 }
 
-function generateImprovement(ctrl_name, required_elements) {
-  return `「${ctrl_name}」 항목의 필수확인요소를 충족하는 내용이 포함된 증적자료를 추가 제출하거나 기존 증적을 보완하시기 바랍니다. 특히 아래 필수확인요소에 대한 구체적인 이행 내역이 명시된 문서(정책서, 지침, 절차서, 수행 기록 등)를 확보하여 제출하시기 권고드립니다.`
+function generateImprovement(ctrl_name) {
+  return `「${ctrl_name}」 항목의 필수확인요소를 충족하는 내용이 포함된 증적자료를 추가 제출하거나 기존 증적을 보완하시기 바랍니다.`
 }
 
 function generateMockResults(selectedControls, files) {
   return (selectedControls || []).map(ctrl => {
-    const guide_sim = +(Math.random() * 0.4 + 0.55).toFixed(2)
-    const req_sim = +(Math.random() * 0.4 + 0.5).toFixed(2)
-    const compliant = guide_sim >= 0.7 && req_sim >= 0.65
-    const riskLevel = getRiskLevel(guide_sim, req_sim, compliant)
+    const fileList = Array.isArray(files?.[ctrl.control_id])
+      ? files[ctrl.control_id]
+      : files?.[ctrl.control_id] ? [files[ctrl.control_id]] : []
 
-    const elem_results = (ctrl.required_elements || []).map(el => ({
-      element: el,
-      met: compliant ? true : Math.random() > 0.5,
-    }))
+    const file_results = fileList.length > 0
+      ? fileList.map((file, i) => ({
+          inspection_no:      i + 1,
+          filename:           file?.name || `증적파일_${i + 1}`,
+          guide_similarity:   +(Math.random() * 0.4 + 0.55).toFixed(2),
+          keyword_similarity: +(Math.random() * 0.4 + 0.5).toFixed(2),
+          file_summary:       `${ctrl.control_name} 항목과 관련된 증적자료입니다.`,
+          file_confirmed:     ['관련 내용이 포함되어 있음', '담당자 정보 확인 가능'],
+          file_missing:       i === 0 ? ['서명·날인 정보 없음'] : [],
+        }))
+      : [{
+          inspection_no: 1, filename: '증적파일',
+          guide_similarity: 0.65, keyword_similarity: 0.6,
+          file_summary: `${ctrl.control_name} 항목과 관련된 증적자료입니다.`,
+          file_confirmed: ['관련 내용 포함'],
+          file_missing: [],
+        }]
+
+    const guide_sim = +(file_results.reduce((s, r) => s + r.guide_similarity, 0) / file_results.length).toFixed(2)
+    const req_sim   = +(file_results.reduce((s, r) => s + r.keyword_similarity, 0) / file_results.length).toFixed(2)
+    const verdict   = guide_sim >= 0.7 && req_sim >= 0.65 ? '적합' : guide_sim >= 0.65 ? '조건부 적합' : '부적합'
+
+    const overall = {
+      guide_similarity:   guide_sim,
+      keyword_similarity: req_sim,
+      verdict,
+      is_compliant:       verdict !== '부적합',
+      judgment_reason:    generateDetailedReason(ctrl.control_name, guide_sim, req_sim, verdict),
+      improvement:        verdict === '부적합' ? generateImprovement(ctrl.control_name) : null,
+      action_items:       verdict === '조건부 적합'
+        ? [{ type: '권고', title: '보완 서류 추가', description: '핵심 요건은 확인되나 일부 세부 사항을 보완하면 더 확실하게 통과할 수 있습니다.', example: '관련 문서 참고' }]
+        : [],
+    }
 
     return {
-      control_id: ctrl.control_id,
-      control_name: ctrl.control_name,
-      category: ctrl.category,
-      keywords: ctrl.keywords || [],
-      evidence_name: files?.[ctrl.control_id]?.name || '증적파일',
-      guide_similarity: guide_sim,
-      required_similarity: req_sim,
-      is_compliant: compliant,
-      risk_level: riskLevel,
-      elem_results,
-      judgment_reason: generateDetailedReason(ctrl.control_name, guide_sim, req_sim, compliant),
-      improvement: compliant ? null : generateImprovement(ctrl.control_name, ctrl.required_elements),
-      top_chunks: [
-        { chunk_id: 'c1', content: '관련 가이드라인 청크 내용 샘플', similarity_score: +(guide_sim - 0.05).toFixed(2) },
-        { chunk_id: 'c2', content: '필수확인요소 청크 내용 샘플', similarity_score: +(req_sim - 0.03).toFixed(2) },
-      ],
+      control_id:          ctrl.control_id,
+      control_name:        ctrl.control_name,
+      category:            ctrl.category,
+      keywords:            ctrl.keywords || [],
+      file_results,
+      overall,
+      verdict,
+      is_compliant:        overall.is_compliant,
+      guide_similarity:    overall.guide_similarity,
+      required_similarity: overall.keyword_similarity,
+      risk_level:          getRiskLevel(verdict),
+      evidence_name:       file_results.map(f => f.filename).join(', '),
+      judgment_reason:     overall.judgment_reason,
+      improvement:         overall.improvement,
+      action_items:        overall.action_items,
     }
   })
 }
@@ -89,16 +131,95 @@ function ScoreGauge({ label, score, threshold, color }) {
   )
 }
 
-export default function ResultReportPage({ taskId, selectedControls, uploadedFiles, onSaveHistory, onNewAnalysis }) {
+// ── 보완 권고 / 필수 항목 카드 ────────────────────────────────────
+function ActionItemCard({ item }) {
+  const isRequired = item.type === '필수'
+  return (
+    <div className={`action-item-card ${isRequired ? 'action-required' : 'action-recommended'}`}>
+      <div className="action-item-header">
+        <span className={`action-type-badge ${isRequired ? 'badge-required' : 'badge-recommended'}`}>
+          {isRequired ? '⚠ 필수' : '💡 권고'}
+        </span>
+        <span className="action-item-title">{item.title}</span>
+      </div>
+      <p className="action-item-desc">{item.description}</p>
+      {item.example && (
+        <div className="action-item-example">
+          <span className="action-example-label">예시 서류</span>
+          <span className="action-example-text">{item.example}</span>
+        </div>
+      )}
+    </div>
+  )
+}
+
+// ── 제출 시 예상 시나리오 박스 (조건부 적합용) ───────────────────
+function SubmitScenarioBox({ verdict, actionItems }) {
+  if (verdict === '적합') return null
+  if (verdict === '조건부 적합') {
+    return (
+      <div className="scenario-box scenario-conditional">
+        <div className="scenario-icon">📋</div>
+        <div className="scenario-body">
+          <div className="scenario-title">이 상태로 제출하면 어떻게 되나요?</div>
+          <p className="scenario-text">
+            현재 증적은 핵심 요건을 충족하고 있어 <strong>통과 가능성이 높습니다.</strong>
+            다만 심사관이 아래 보완 항목에 대해 추가 자료를 요청할 수 있습니다.
+            미리 준비해 두면 더 빠르고 확실하게 통과할 수 있습니다.
+          </p>
+        </div>
+      </div>
+    )
+  }
+  return (
+    <div className="scenario-box scenario-fail">
+      <div className="scenario-icon">🚨</div>
+      <div className="scenario-body">
+        <div className="scenario-title">이 상태로 제출하면 어떻게 되나요?</div>
+        <p className="scenario-text">
+          핵심 필수확인요소가 증적에서 확인되지 않아 <strong>결함으로 처리될 가능성이 높습니다.</strong>
+          아래 보완 사항을 반드시 조치한 후 재제출하시기 바랍니다.
+        </p>
+      </div>
+    </div>
+  )
+}
+
+export default function ResultReportPage({ taskId, selectedControls, uploadedFiles, apiResults, historyResults, onSaveHistory, onNewAnalysis }) {
   const navigate = useNavigate()
   const [selectedIdx, setSelectedIdx] = useState(0)
-  const [chunksOpen, setChunksOpen] = useState(false)
+  const [fileSlideIdx, setFileSlideIdx] = useState(0)
   const [pdfLoading, setPdfLoading] = useState(null)
   const savedRef = useRef(false)
   const resultsRef = useRef(null)
 
   if (!resultsRef.current) {
-    resultsRef.current = generateMockResults(selectedControls, uploadedFiles)
+    if (historyResults) {
+      resultsRef.current = historyResults
+    } else if (apiResults) {
+      resultsRef.current = apiResults.map(r => {
+        const verdict = r.overall?.verdict || (r.overall?.is_compliant ? '적합' : '부적합')
+        return {
+          control_id:          r.control_id,
+          control_name:        r.control_name,
+          category:            selectedControls.find(c => c.control_id === r.control_id)?.category || '',
+          keywords:            selectedControls.find(c => c.control_id === r.control_id)?.keywords || [],
+          file_results:        r.file_results,
+          overall:             r.overall,
+          verdict,
+          is_compliant:        verdict !== '부적합',
+          guide_similarity:    r.overall?.guide_similarity ?? 0,
+          required_similarity: r.overall?.keyword_similarity ?? 0,
+          risk_level:          getRiskLevel(verdict),
+          evidence_name:       r.file_results?.map(f => f.filename).join(', ') || '',
+          judgment_reason:     r.overall?.judgment_reason || '',
+          improvement:         r.overall?.improvement || null,
+          action_items:        r.overall?.action_items || [],
+        }
+      })
+    } else {
+      resultsRef.current = generateMockResults(selectedControls, uploadedFiles)
+    }
   }
   const results = resultsRef.current
 
@@ -107,46 +228,55 @@ export default function ResultReportPage({ taskId, selectedControls, uploadedFil
     hour: '2-digit', minute: '2-digit'
   })
 
+  useEffect(() => { setFileSlideIdx(0) }, [selectedIdx])
+
   useEffect(() => {
-    if (!savedRef.current && results.length > 0) {
+    if (!savedRef.current && results.length > 0 && !historyResults) {
       savedRef.current = true
       const compliantCount = results.filter(r => r.is_compliant).length
       onSaveHistory?.({
         id: Date.now(),
         date: new Date().toISOString(),
+        fullResults: results,
         results: results.map(r => ({
-          control_id: r.control_id,
-          control_name: r.control_name,
-          category: r.category,
-          is_compliant: r.is_compliant,
-          risk_level: r.risk_level,
-          guide_similarity: r.guide_similarity,
+          control_id:          r.control_id,
+          control_name:        r.control_name,
+          category:            r.category,
+          verdict:             r.verdict,
+          is_compliant:        r.is_compliant,
+          risk_level:          r.risk_level,
+          guide_similarity:    r.guide_similarity,
           required_similarity: r.required_similarity,
         })),
         summary: {
-          total: results.length,
+          total:     results.length,
           compliant: compliantCount,
-          rate: results.length > 0 ? Math.round((compliantCount / results.length) * 100) : 0,
+          rate:      results.length > 0 ? Math.round((compliantCount / results.length) * 100) : 0,
         },
       })
     }
   }, [])
 
-  if (!selectedControls || selectedControls.length === 0) {
+  if (!historyResults && (!selectedControls || selectedControls.length === 0)) {
     return (
       <div style={{ textAlign: 'center', padding: '80px 24px' }}>
-        <div style={{ fontSize: '3rem', marginBottom: 16 }}>📋</div>
         <p style={{ color: '#64748B', marginBottom: 20 }}>분석 결과가 없습니다.</p>
         <button className="btn-primary" onClick={() => navigate('/')}>처음부터 시작하기</button>
       </div>
     )
   }
 
-  const compliantCount = results.filter(r => r.is_compliant).length
-  const total = results.length
-  const rate = total > 0 ? Math.round((compliantCount / total) * 100) : 0
-  const detail = results[selectedIdx]
-  const riskInfo = RISK[detail?.risk_level || 'LOW']
+  const total              = results.length
+  const compliantCount     = results.filter(r => getVerdict(r) === '적합').length
+  const conditionalCount   = results.filter(r => getVerdict(r) === '조건부 적합').length
+  const nonCompliantCount  = results.filter(r => getVerdict(r) === '부적합').length
+  const passCount          = compliantCount + conditionalCount
+  const rate               = total > 0 ? Math.round((passCount / total) * 100) : 0
+
+  const detail      = results[selectedIdx]
+  const detailVerdict = getVerdict(detail)
+  const verdictStyle  = VERDICT_STYLE[detailVerdict] || VERDICT_STYLE['부적합']
+  const actionItems   = detail?.action_items || detail?.overall?.action_items || []
 
   const handleFullPDF = async () => {
     setPdfLoading('full')
@@ -179,16 +309,15 @@ export default function ResultReportPage({ taskId, selectedControls, uploadedFil
           <span className="summary-big green">{compliantCount}</span>
           <span className="summary-unit">개</span>
         </div>
-        <div className="summary-card card non-card">
-          <span className="summary-label">부적합</span>
-          <span className="summary-big red">{total - compliantCount}</span>
+        <div className="summary-card card conditional-card">
+          <span className="summary-label">조건부 적합</span>
+          <span className="summary-big orange">{conditionalCount}</span>
           <span className="summary-unit">개</span>
         </div>
-        <div className="summary-card card rate-card">
-          <span className="summary-label">적합률</span>
-          <span className="summary-big blue">{rate}</span>
-          <span className="summary-unit">%</span>
-          <div className="rate-bar"><div className="rate-fill" style={{ width: `${rate}%` }} /></div>
+        <div className="summary-card card non-card">
+          <span className="summary-label">부적합</span>
+          <span className="summary-big red">{nonCompliantCount}</span>
+          <span className="summary-unit">개</span>
         </div>
       </div>
 
@@ -201,20 +330,26 @@ export default function ResultReportPage({ taskId, selectedControls, uploadedFil
             항목 목록 <span className="list-header-count">{total}개</span>
           </div>
           {results.map((r, idx) => {
-            const ri = RISK[r.risk_level]
+            const v = getVerdict(r)
+            const vs = VERDICT_STYLE[v] || VERDICT_STYLE['부적합']
             return (
               <div
                 key={idx}
-                className={`result-list-item ${idx === selectedIdx ? 'rli-active' : ''} ${r.is_compliant ? 'rli-ok' : 'rli-fail'}`}
-                onClick={() => { setSelectedIdx(idx); setChunksOpen(false) }}
+                className={`result-list-item ${idx === selectedIdx ? 'rli-active' : ''}`}
+                style={idx === selectedIdx ? { borderLeftColor: vs.color, background: vs.bg + '80' } : {}}
+                onClick={() => setSelectedIdx(idx)}
               >
-                <span className="rli-dot" style={{ background: ri.color }} />
+                <span className="rli-dot" style={{ background: vs.dotColor }} />
                 <div className="rli-text">
                   <span className="rli-id">{r.control_id}</span>
                   <span className="rli-name">{r.control_name}</span>
                 </div>
-                <span className="rli-risk-badge" style={{ background: ri.bg, color: ri.color, border: `1px solid ${ri.border}` }}>
-                  {ri.label}
+                <span className="rli-risk-badge" style={{
+                  background: vs.bg,
+                  color:      vs.color,
+                  border:     `1px solid ${vs.border}`,
+                }}>
+                  {vs.icon} {v}
                 </span>
               </div>
             )
@@ -234,11 +369,12 @@ export default function ResultReportPage({ taskId, selectedControls, uploadedFil
                   {detail.category && <span className="detail-category">{detail.category}</span>}
                 </div>
                 <div className="detail-header-right">
-                  <span className="detail-risk-badge" style={{ background: riskInfo.bg, color: riskInfo.color, border: `1.5px solid ${riskInfo.border}` }}>
-                    위험도: {riskInfo.label}
-                  </span>
-                  <span className={`badge ${detail.is_compliant ? 'badge-compliant' : 'badge-non-compliant'}`}>
-                    {detail.is_compliant ? '✓ 적합' : '✕ 부적합'}
+                  <span className="verdict-badge" style={{
+                    background: verdictStyle.bg,
+                    color:      verdictStyle.color,
+                    border:     `1.5px solid ${verdictStyle.border}`,
+                  }}>
+                    {verdictStyle.icon} {detailVerdict}
                   </span>
                 </div>
               </div>
@@ -246,91 +382,155 @@ export default function ResultReportPage({ taskId, selectedControls, uploadedFil
               {/* 증적파일 */}
               <div className="detail-evidence-row">
                 <span className="detail-ev-label">제출 증적</span>
-                <span className="detail-ev-name">📄 {detail.evidence_name}</span>
+                <div className="detail-ev-name">
+                  {(detail.evidence_name || '').split(', ').map((name, i) => (
+                    <div key={i} className="ev-file-row">{name}</div>
+                  ))}
+                </div>
               </div>
 
-              {/* 유사도 게이지 */}
-              <div className="detail-section">
-                <div className="detail-section-title">유사도 분석</div>
-                <div className="detail-scores">
-                  <ScoreGauge
-                    label="가이드라인 유사도"
-                    score={detail.guide_similarity}
-                    threshold={0.7}
-                    color={detail.guide_similarity >= 0.7 ? '#059669' : '#DC2626'}
-                  />
-                  <ScoreGauge
-                    label="필수확인요소 유사도"
-                    score={detail.required_similarity}
-                    threshold={0.65}
-                    color={detail.required_similarity >= 0.65 ? '#059669' : '#DC2626'}
-                  />
+              {/* 제출 시 예상 시나리오 (적합이 아닐 때만) */}
+              {detailVerdict !== '적합' && (
+                <SubmitScenarioBox verdict={detailVerdict} actionItems={actionItems} />
+              )}
+
+              {/* 파일별 내용 요약 — 캐러셀 */}
+              {detail.file_results?.length > 0 && (
+                <div className="detail-section">
+                  <div className="detail-section-title">
+                    제출 파일별 내용
+                    <span className="file-slide-counter">
+                      {fileSlideIdx + 1} / {detail.file_results.length}
+                    </span>
+                  </div>
+                  <div className="file-carousel">
+                    <button
+                      className="file-carousel-arrow"
+                      disabled={fileSlideIdx === 0}
+                      onClick={() => setFileSlideIdx(i => Math.max(0, i - 1))}
+                    >‹</button>
+                    <div className="file-carousel-card">
+                      <div className="file-carousel-name">
+                        {detail.file_results[fileSlideIdx]?.filename}
+                      </div>
+                      {detail.file_results[fileSlideIdx]?.file_summary && (
+                        <p className="file-carousel-desc">
+                          {detail.file_results[fileSlideIdx].file_summary}
+                        </p>
+                      )}
+                      <div className="file-carousel-bullets">
+                        {(detail.file_results[fileSlideIdx]?.file_confirmed || []).map((item, i) => (
+                          <div key={i} className="fc-bullet fc-confirmed">{item}</div>
+                        ))}
+                        {(detail.file_results[fileSlideIdx]?.file_missing || []).map((item, i) => (
+                          <div key={i} className="fc-bullet fc-missing">{item}</div>
+                        ))}
+                      </div>
+                    </div>
+                    <button
+                      className="file-carousel-arrow"
+                      disabled={fileSlideIdx === detail.file_results.length - 1}
+                      onClick={() => setFileSlideIdx(i => Math.min(detail.file_results.length - 1, i + 1))}
+                    >›</button>
+                  </div>
+                  {detail.file_results.length > 1 && (
+                    <div className="file-carousel-dots">
+                      {detail.file_results.map((_, i) => (
+                        <button
+                          key={i}
+                          className={`file-carousel-dot ${i === fileSlideIdx ? 'dot-active' : ''}`}
+                          onClick={() => setFileSlideIdx(i)}
+                          title={detail.file_results[i].filename}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
+              )}
+
+              {/* 가이드라인 부합도 */}
+              <div className="detail-section">
+                <div className="detail-section-title">가이드라인 부합도</div>
+                <ScoreGauge
+                  label="가이드라인 부합도"
+                  score={detail.overall?.guide_similarity ?? detail.guide_similarity}
+                  threshold={0.7}
+                  color={(detail.overall?.guide_similarity ?? detail.guide_similarity) >= 0.7 ? '#059669' : '#DC2626'}
+                />
               </div>
 
               {/* 판단 근거 */}
               <div className="detail-section">
                 <div className="detail-section-title">판단 근거</div>
                 <div className="detail-reason-box">
-                  <p>{detail.judgment_reason}</p>
+                  {(detail.judgment_reason || '').split('\n\n').filter(Boolean).map((para, i) => {
+                    const labelMatch = para.match(/^\*\*(.+?):\*\*\s*([\s\S]*)$/)
+                    if (labelMatch) {
+                      const isWarning = labelMatch[1].includes('보완')
+                      const body = labelMatch[2].trim()
+                      const lines = body.split('\n').filter(Boolean)
+                      return (
+                        <div key={i} className={`reason-block ${isWarning ? 'reason-block-warn' : ''}`}>
+                          <span className={`reason-label ${isWarning ? 'reason-label-warn' : ''}`}>{labelMatch[1]}</span>
+                          <div className="reason-body">
+                            {lines.map((line, j) => {
+                              if (line.startsWith('- '))
+                                return <div key={j} className="reason-bullet">{line.slice(2)}</div>
+                              if (line.startsWith('→ '))
+                                return <div key={j} className="reason-arrow">{line.slice(2)}</div>
+                              return <p key={j} className="reason-text" style={{ margin: j > 0 ? '6px 0 0' : 0 }}>{line}</p>
+                            })}
+                          </div>
+                        </div>
+                      )
+                    }
+                    return <p key={i} className="reason-text" style={{ marginTop: i > 0 ? 10 : 0 }}>{para}</p>
+                  })}
                 </div>
               </div>
 
-              {/* 필수확인요소 충족 현황 */}
-              {detail.elem_results?.length > 0 && (
+              {/* 보완 권고 / 필수 액션 아이템 */}
+              {actionItems.length > 0 && (
                 <div className="detail-section">
-                  <div className="detail-section-title">필수확인요소 충족 현황</div>
-                  <div className="elem-list">
-                    {detail.elem_results.map((el, i) => (
-                      <div key={i} className={`elem-item ${el.met ? 'elem-ok' : 'elem-fail'}`}>
-                        <span className={`elem-status-badge ${el.met ? 'elem-badge-ok' : 'elem-badge-fail'}`}>
-                          {el.met ? '양호' : '미흡'}
-                        </span>
-                        <span className="elem-text">{el.element}</span>
-                      </div>
+                  <div className={`detail-section-title ${detailVerdict === '부적합' ? 'warn' : 'conditional'}`}>
+                    {detailVerdict === '부적합' ? '🚨 필수 보완 사항' : '💡 보완하면 더 좋아요'}
+                  </div>
+                  <div className="action-items-list">
+                    {actionItems.map((item, i) => (
+                      <ActionItemCard key={i} item={item} />
                     ))}
                   </div>
                 </div>
               )}
 
-              {/* 개선 권고사항 */}
-              {detail.improvement && (
+              {/* 부적합 개선 권고사항 (legacy improvement 필드) */}
+              {detail.improvement && actionItems.length === 0 && (
                 <div className="detail-section">
                   <div className="detail-section-title warn">개선 권고사항</div>
                   <div className="detail-improvement">
-                    <div className="improvement-icon">⚠</div>
-                    <p>{detail.improvement}</p>
+                    <div>
+                      {(detail.improvement || '').split('\n\n').filter(Boolean).map((para, i) => (
+                        <p key={i} style={{ margin: i > 0 ? '8px 0 0' : 0, fontSize: '0.88rem', color: '#92400E', lineHeight: 1.7 }}>{para}</p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
 
-              {/* 청크 */}
-              <button className="chunk-toggle" onClick={() => setChunksOpen(v => !v)}>
-                {chunksOpen ? '▲ 참조 청크 숨기기' : '▼ 참조 청크 보기'}
-              </button>
-              {chunksOpen && (
-                <div className="chunk-list">
-                  {detail.top_chunks.map(c => (
-                    <div key={c.chunk_id} className="chunk-row">
-                      <span className="chunk-score-badge">{(c.similarity_score * 100).toFixed(1)}%</span>
-                      <span className="chunk-text">{c.content}</span>
-                    </div>
-                  ))}
+              {/* 이전/다음 */}
+              {total > 1 && (
+                <div className="detail-nav">
+                  <button className="btn-secondary detail-nav-btn" disabled={selectedIdx === 0}
+                    onClick={() => setSelectedIdx(selectedIdx - 1)}>
+                    ← 이전 항목
+                  </button>
+                  <span className="detail-nav-pos">{selectedIdx + 1} / {total}</span>
+                  <button className="btn-secondary detail-nav-btn" disabled={selectedIdx === total - 1}
+                    onClick={() => setSelectedIdx(selectedIdx + 1)}>
+                    다음 항목 →
+                  </button>
                 </div>
               )}
-
-              {/* 이전/다음 */}
-              <div className="detail-nav">
-                <button className="btn-secondary detail-nav-btn" disabled={selectedIdx === 0}
-                  onClick={() => { setSelectedIdx(selectedIdx - 1); setChunksOpen(false) }}>
-                  ← 이전 항목
-                </button>
-                <span className="detail-nav-pos">{selectedIdx + 1} / {total}</span>
-                <button className="btn-secondary detail-nav-btn" disabled={selectedIdx === total - 1}
-                  onClick={() => { setSelectedIdx(selectedIdx + 1); setChunksOpen(false) }}>
-                  다음 항목 →
-                </button>
-              </div>
             </div>
           </div>
         )}
@@ -341,11 +541,11 @@ export default function ResultReportPage({ taskId, selectedControls, uploadedFil
         <div style={{ display: 'flex', gap: 10 }}>
           <button className="btn-secondary" onClick={handleItemPDF} disabled={!!pdfLoading}
             style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            {pdfLoading === 'item' ? '⏳' : '📄'} 현재 항목 PDF
+            현재 항목 PDF
           </button>
           <button className="btn-primary" onClick={handleFullPDF} disabled={!!pdfLoading}
             style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            {pdfLoading === 'full' ? '⏳ 생성 중...' : '📋 전체 보고서 PDF'}
+            {pdfLoading === 'full' ? '생성 중...' : '전체 보고서 PDF'}
           </button>
         </div>
       </div>

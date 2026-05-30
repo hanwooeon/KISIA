@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+supabase
+python-dotenv
+openai
+numpy
+FlagEmbedding
+docling

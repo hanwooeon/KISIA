@@ -67,15 +67,16 @@
 }
 
 .summary-big { font-size: 2.8rem; font-weight: 900; color: #1E293B; line-height: 1; }
-.summary-big.green { color: #059669; }
-.summary-big.red   { color: #DC2626; }
-.summary-big.blue  { color: #4F46E5; }
+.summary-big.green  { color: #059669; }
+.summary-big.orange { color: #D97706; }
+.summary-big.red    { color: #DC2626; }
+.summary-big.blue   { color: #4F46E5; }
 
 .summary-unit { font-size: 0.85rem; color: #94A3B8; font-weight: 500; margin-top: 3px; }
 
-.compliant-card { border-top: 3px solid #059669; }
-.non-card       { border-top: 3px solid #DC2626; }
-.rate-card      { border-top: 3px solid #6366F1; }
+.compliant-card  { border-top: 3px solid #059669; }
+.conditional-card{ border-top: 3px solid #D97706; }
+.non-card        { border-top: 3px solid #DC2626; }
 
 .rate-bar { width:100%;height:4px;background:#E0E7FF;border-radius:2px;margin-top:12px;overflow:hidden; }
 .rate-fill { height:100%;background:linear-gradient(90deg,#4F46E5,#818CF8);border-radius:2px;transition:width 0.8s ease; }
@@ -193,6 +194,15 @@
 
 .detail-header-right { display:flex;align-items:center;gap:8px;flex-shrink:0; }
 
+/* 3단계 판정 배지 */
+.verdict-badge {
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
 .detail-risk-badge {
   font-size: 0.75rem;
   font-weight: 800;
@@ -202,7 +212,7 @@
 
 .detail-evidence-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   padding: 10px 14px;
   background: #F8FAFC;
@@ -220,7 +230,15 @@
   white-space: nowrap;
 }
 
-.detail-ev-name { font-size:0.88rem;font-weight:600;color:#1E293B; }
+.detail-ev-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1E293B;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 1px;
+}
 
 /* Sections */
 .detail-section { margin-bottom: 20px; }
@@ -237,6 +255,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  width: 100%;
 }
 
 .detail-section-title::before {
@@ -250,6 +269,8 @@
 
 .detail-section-title.warn { color: #D97706; }
 .detail-section-title.warn::before { background: #F59E0B; }
+.detail-section-title.conditional { color: #D97706; }
+.detail-section-title.conditional::before { background: #D97706; }
 
 /* Score Gauge */
 .detail-scores {
@@ -305,6 +326,73 @@
 }
 
 .detail-reason-box p { font-size:0.88rem;color:#374151;line-height:1.75;margin:0; }
+
+.reason-block {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: #F8FAFF;
+  border-radius: 8px;
+  border-left: 3px solid #6366F1;
+}
+
+.reason-block:first-child { margin-top: 0; }
+
+.reason-block-warn {
+  background: #FFFBEB;
+  border-left-color: #F59E0B;
+}
+
+.reason-label-warn { color: #D97706; }
+
+.reason-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #4F46E5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.reason-body { display: flex; flex-direction: column; gap: 4px; }
+
+.reason-text {
+  font-size: 0.88rem;
+  color: #374151;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.reason-bullet {
+  font-size: 0.85rem;
+  color: #374151;
+  line-height: 1.6;
+  padding-left: 14px;
+  position: relative;
+}
+.reason-bullet::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: #6366F1;
+  font-weight: 700;
+}
+
+.reason-arrow {
+  font-size: 0.85rem;
+  color: #1E293B;
+  font-weight: 600;
+  line-height: 1.6;
+  padding: 6px 10px;
+  background: #EEF2FF;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+.reason-arrow::before {
+  content: '→ ';
+  color: #4F46E5;
+  font-weight: 800;
+}
 
 /* 필수확인요소 */
 .elem-list { display:flex;flex-direction:column;gap:6px; }
@@ -414,4 +502,281 @@
   .result-list-panel { position:static;max-height:none; }
   .detail-scores { grid-template-columns:1fr; }
   .rp-header { flex-direction:column; }
+}
+
+/* ── 파일별 캐러셀 ── */
+.file-slide-counter {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: #94A3B8;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.file-carousel {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.file-carousel-arrow {
+  background: white;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 8px;
+  width: 32px;
+  min-width: 32px;
+  height: 56px;
+  font-size: 1.4rem;
+  color: #64748B;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  margin-top: 2px;
+  line-height: 1;
+}
+
+.file-carousel-arrow:hover:not(:disabled) {
+  background: #EEF2FF;
+  border-color: #6366F1;
+  color: #4F46E5;
+}
+
+.file-carousel-arrow:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.file-carousel-card {
+  flex: 1;
+  background: #F8FAFF;
+  border: 1.5px solid #C7D2FE;
+  border-radius: 12px;
+  padding: 14px 16px;
+  min-height: 80px;
+}
+
+.file-carousel-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1E293B;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+
+.file-carousel-desc {
+  font-size: 0.8rem;
+  color: #64748B;
+  line-height: 1.55;
+  margin: 0 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E0E7FF;
+}
+
+.file-carousel-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fc-bullet {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  padding: 4px 8px 4px 22px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.fc-bullet::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.fc-confirmed {
+  background: #F0FDF4;
+  color: #166534;
+}
+
+.fc-confirmed::before { background: #059669; }
+
+.fc-missing {
+  background: #FFFBEB;
+  color: #92400E;
+}
+
+.fc-missing::before { background: #D97706; }
+
+/* 증적 파일 행 */
+.ev-file-row {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+  padding: 1px 0;
+}
+
+.ev-file-row::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #94A3B8;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.file-carousel-dots {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.file-carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.file-carousel-dot.dot-active {
+  background: #6366F1;
+  width: 18px;
+  border-radius: 3px;
+}
+
+/* ── 제출 시 예상 시나리오 박스 ── */
+.scenario-box {
+  display: flex;
+  gap: 12px;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.scenario-conditional {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+}
+
+.scenario-fail {
+  background: #FEF2F2;
+  border: 1px solid #FCA5A5;
+}
+
+.scenario-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+
+.scenario-body { flex: 1; }
+
+.scenario-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #1E293B;
+  margin-bottom: 6px;
+}
+
+.scenario-text {
+  font-size: 0.83rem;
+  line-height: 1.65;
+  margin: 0;
+  color: #374151;
+}
+
+.scenario-conditional .scenario-text { color: #92400E; }
+.scenario-fail .scenario-text { color: #991B1B; }
+
+/* ── 액션 아이템 카드 ── */
+.action-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.action-item-card {
+  border-radius: 10px;
+  padding: 14px 16px;
+  border: 1.5px solid transparent;
+}
+
+.action-required {
+  background: #FEF2F2;
+  border-color: #FCA5A5;
+}
+
+.action-recommended {
+  background: #FFFBEB;
+  border-color: #FDE68A;
+}
+
+.action-item-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.action-type-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 9px;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge-required     { background: #FEE2E2; color: #991B1B; }
+.badge-recommended  { background: #FEF3C7; color: #92400E; }
+
+.action-item-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.action-item-desc {
+  font-size: 0.83rem;
+  color: #374151;
+  line-height: 1.65;
+  margin: 0 0 8px;
+}
+
+.action-item-example {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border-radius: 6px;
+  padding: 6px 10px;
+  border: 1px solid #E2E8F0;
+}
+
+.action-example-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #6366F1;
+  background: #EEF2FF;
+  padding: 1px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.action-example-text {
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.4;
 }

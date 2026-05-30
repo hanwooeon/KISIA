@@ -37,11 +37,12 @@ function createWindow() {
   })
 }
 
-ipcMain.on('window-minimize', () => win?.minimize())
-ipcMain.on('window-maximize', () => win?.isMaximized() ? win.unmaximize() : win.maximize())
-ipcMain.on('window-close',    () => win?.close())
-
-app.whenReady().then(createWindow)
+app.whenReady().then(() => {
+  ipcMain.on('window-minimize', () => win?.minimize())
+  ipcMain.on('window-maximize', () => win?.isMaximized() ? win.unmaximize() : win.maximize())
+  ipcMain.on('window-close',    () => win?.close())
+  createWindow()
+})
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit()
