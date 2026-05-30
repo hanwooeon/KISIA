@@ -7,12 +7,12 @@ from loguru import logger
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'User_upload'))
-from Parshing.parser import parse_file
-from Parshing.cleaner import clean_markdown
-from Chunking.chunker import chunk_markdown
-from Embedding.embedder import embed_texts
-from DB.uploader import upload_chunks
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'user_upload'))
+from parshing.parser import parse_file
+from parshing.cleaner import clean_markdown
+from chunking.chunker import chunk_markdown
+from embedding.embedder import embed_texts
+from db.uploader import upload_chunks
 
 from services.db import (
     get_control_info,
