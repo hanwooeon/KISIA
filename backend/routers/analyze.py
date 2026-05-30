@@ -1,6 +1,9 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 import sys
 import os
+import time
+import hashlib
+from loguru import logger
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
@@ -35,29 +38,24 @@ class AnalyzeRequest(BaseModel):
     control_ids: list[str]         # 분석할 항목 목록
 
 
-def _process_file(temp_id: str, control_id: str) -> int:
-    """임시 파일 → OCR/청킹/임베딩 → DB 저장 → inspection_no 반환"""
-    info = get_temp_file(temp_id)
-    if not info:
-        raise HTTPException(status_code=404, detail=f"임시 파일을 찾을 수 없습니다: {temp_id}")
-
-    try:
-        raw, elements, doc, page_map = parse_file(info['path'])
-        cleaned = clean_markdown(raw)
-        chunks = chunk_markdown(cleaned, source=info['filename'], elements=elements, doc=doc, page_map=page_map)
-
-        if not chunks:
-            raise HTTPException(status_code=422, detail=f"{info['filename']}에서 텍스트를 추출할 수 없습니다.")
-
-        contents = [c['content'] for c in chunks]
-        embeddings = embed_texts(contents)
-        for chunk, emb in zip(chunks, embeddings):
-            chunk['embedding'] = emb
-
-        inspection_no = upload_chunks(chunks, user_selection=control_id)
-        return inspection_no
-    finally:
-        remove_temp_file(temp_id)
+def _parse_and_embed(info: dict) -> list:
+    """OCR/청킹/임베딩 → chunks 반환 (DB 저장 없음)"""
+    filename = info['filename']
+    t0 = time.time()
+    logger.info(f"[파일처리 시작] {filename}")
+    raw, elements, doc, page_map = parse_file(info['path'])
+    logger.info(f"[OCR 완료] {filename} — {time.time()-t0:.1f}s")
+    cleaned = clean_markdown(raw)
+    chunks = chunk_markdown(cleaned, source=filename, elements=elements, doc=doc, page_map=page_map)
+    if not chunks:
+        raise HTTPException(status_code=422, detail=f"{filename}에서 텍스트를 추출할 수 없습니다.")
+    logger.info(f"[청킹 완료] {filename} — 청크 {len(chunks)}개")
+    contents = [c['content'] for c in chunks]
+    embeddings = embed_texts(contents)
+    for chunk, emb in zip(chunks, embeddings):
+        chunk['embedding'] = emb
+    logger.info(f"[임베딩 완료] {filename} — {time.time()-t0:.1f}s 경과")
+    return chunks
 
 
 @router.post("/analyze")
@@ -69,9 +67,27 @@ async def analyze(body: AnalyzeRequest):
     3. LLM 판단
     4. 결과 저장 및 반환
     """
-    # ── 1. 파일 처리 (OCR/청킹/임베딩) ──────────────────────────────
+    # ── 1. 파일 처리 (OCR/청킹/임베딩, 동일 파일 중복 스킵) ─────────
+    chunk_cache: dict[str, list] = {}  # md5 → chunks
+
     for item in body.items:
-        _process_file(item.temp_id, item.control_id)
+        info = get_temp_file(item.temp_id)
+        if not info:
+            logger.error(f"[파일 없음] temp_id={item.temp_id}")
+            continue
+        try:
+            file_hash = hashlib.md5(open(info['path'], 'rb').read()).hexdigest()
+            if file_hash not in chunk_cache:
+                chunks = _parse_and_embed(info)
+                chunk_cache[file_hash] = chunks
+            else:
+                logger.info(f"[중복 스킵] {info['filename']}")
+                chunks = chunk_cache[file_hash]
+            upload_chunks(chunks, user_selection=item.control_id)
+        except Exception as e:
+            logger.error(f"[파일처리 실패] {info['filename']} — {e}")
+        finally:
+            remove_temp_file(item.temp_id)
 
     # ── 2. 항목별 분석 ───────────────────────────────────────────────
     results = []

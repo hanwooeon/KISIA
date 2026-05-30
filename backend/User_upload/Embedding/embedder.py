@@ -1,12 +1,12 @@
-from __future__ import annotations
-from FlagEmbedding import BGEM3FlagModel
+﻿from __future__ import annotations
 
-_model: BGEM3FlagModel | None = None
+_model = None
 
 
-def _get_model() -> BGEM3FlagModel:
+def _get_model():
     global _model
     if _model is None:
+        from FlagEmbedding import BGEM3FlagModel
         _model = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True)
     return _model
 

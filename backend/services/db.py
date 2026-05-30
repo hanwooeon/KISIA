@@ -71,13 +71,11 @@ def _next_result_no() -> int:
     result = (
         _get_client()
         .table('점검 결과 테이블')
-        .select('점검 번호')
-        .order('점검 번호', desc=True)
-        .limit(1)
+        .select('*')
         .execute()
     )
     if result.data:
-        return result.data[0]['점검 번호'] + 1
+        return max(row['점검 번호'] for row in result.data) + 1
     return 1
 
 

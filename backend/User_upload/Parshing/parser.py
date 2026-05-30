@@ -1,9 +1,8 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 import os
 import re
 import tempfile
 from pathlib import Path
-from docling.document_converter import DocumentConverter
 
 SUPPORTED_EXTENSIONS = {
     ".pdf", ".docx", ".pptx", ".xlsx",
@@ -179,6 +178,7 @@ def parse_file(file_path: str) -> tuple[str, list[dict], object]:
             tmp_created = True
 
     try:
+        from docling.document_converter import DocumentConverter
         converter = DocumentConverter()
         result = converter.convert(actual_path)
         doc = result.document
