@@ -10,7 +10,7 @@ _client: Client | None = None
 _METADATA_KEYS = {
     'inspection_date', 'inspection_area', 'inspection_item',
     'criteria', 'result', 'deficiency', 'action', 'action_date',
-    'section', 'page_no', 'subsection',
+    'section', 'page_no', 'subsection', 'row_no',
 }
 _SKIP_KEYS = {'chunk_id', 'source', 'content', 'embedding'}
 

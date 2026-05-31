@@ -1,0 +1,794 @@
+[
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0001",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "문 서 번 호: 문 서 명 | BBL-ISMS-2026-DOC-001: 정보보호 및 개인정보보호 관리체계 문서 목록",
+    "metadata": {
+      "section": "문서정보 > Information Security & Privacy Management System Document Inventory",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0002",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "문 서 번 호: 관련 인증기준 | BBL-ISMS-2026-DOC-001: ISMS-P 1.1.4 범위 설정",
+    "metadata": {
+      "section": "문서정보 > Information Security & Privacy Management System Document Inventory",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0003",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "문 서 번 호: 작 성 부 서 | BBL-ISMS-2026-DOC-001: 정보보호팀",
+    "metadata": {
+      "section": "문서정보 > Information Security & Privacy Management System Document Inventory",
+      "row_no": 3
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0004",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "문 서 번 호: 작 성 자 | BBL-ISMS-2026-DOC-001: 정보보안팀장 (CISO) 김보안",
+    "metadata": {
+      "section": "문서정보 > Information Security & Privacy Management System Document Inventory",
+      "row_no": 4
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0005",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "문 서 번 호: 작 성 일 자 | BBL-ISMS-2026-DOC-001: 2026년 1월 20일",
+    "metadata": {
+      "section": "문서정보 > Information Security & Privacy Management System Document Inventory",
+      "row_no": 5
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0006",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "문 서 번 호: 승 인 자 | BBL-ISMS-2026-DOC-001: 대표이사 (CEO/CPO) 김밤티",
+    "metadata": {
+      "section": "문서정보 > Information Security & Privacy Management System Document Inventory",
+      "row_no": 6
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0007",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "문 서 번 호: 문 서 버 전 | BBL-ISMS-2026-DOC-001: v1.1",
+    "metadata": {
+      "section": "문서정보 > Information Security & Privacy Management System Document Inventory",
+      "row_no": 7
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0008",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "문 서 번 호: 보 안 등 급 | BBL-ISMS-2026-DOC-001: 대외비",
+    "metadata": {
+      "section": "문서정보 > Information Security & Privacy Management System Document Inventory",
+      "row_no": 8
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0009",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "계층: 1계층 | 구분: 정책 (Policy) | 문서번호 패턴: BBL-ISMS-YYYY-POL-NNN | 제·개정 권한: 대표이사 승인 | 예시: 정보보호 및 개인정보보호 정책서",
+    "metadata": {
+      "section": "문서정보 > ▣ 문서 체계 (4계층 / 문서번호 체계)",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0010",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "계층: 2계층 | 구분: 지침 (Guideline) | 문서번호 패턴: BBL-ISMS-YYYY-GDL-NNN | 제·개정 권한: CISO·CPO 승인 | 예시: 서버보안 지침, 개인정보보호 지침 등",
+    "metadata": {
+      "section": "문서정보 > ▣ 문서 체계 (4계층 / 문서번호 체계)",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0011",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "계층: 3계층 | 구분: 절차 (Procedure) | 문서번호 패턴: BBL-ISMS-YYYY-PRC-NNN | 제·개정 권한: 정보보안팀장 승인 | 예시: 계정관리 절차, 사고대응 절차 등",
+    "metadata": {
+      "section": "문서정보 > ▣ 문서 체계 (4계층 / 문서번호 체계)",
+      "row_no": 3
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0012",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "계층: 4계층 | 구분: 양식·증적 (Form) | 문서번호 패턴: BBL-ISMS-YYYY-FRM-NNN | 제·개정 권한: 담당자 작성 | 예시: 계정 신청서, 점검 결과서 등",
+    "metadata": {
+      "section": "문서정보 > ▣ 문서 체계 (4계층 / 문서번호 체계)",
+      "row_no": 4
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0013",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "차수: 1 | Version: v1.0 | 개정일자: 2025-12-15 | 개정 사유 / 주요 내용: 문서 목록 최초 제정 (ISMS-P 인증 준비 착수) | 작성자: 정보보안팀장 (김보안)",
+    "metadata": {
+      "section": "문서정보 > ▣ 문서 개정 이력",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0014",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "차수: 2 | Version: v1.1 | 개정일자: 2026-01-20 | 개정 사유 / 주요 내용: 범위 정의서 v1.1 연계 / 양식·절차 문서 추가 반영 | 작성자: 정보보안팀장 (김보안)",
+    "metadata": {
+      "section": "문서정보 > ▣ 문서 개정 이력",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0015",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 1 | 계층: 1계층 | 문서번호: BBL-ISMS-2026-POL-001 | 문서명: 정보보호 및 개인정보보호 정책·지침 및 내부관리계획 | 주관부서: 정보보호팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: 대표이사 (김밤티) | 보안등급: 대내한 | 관련 인증기준: 1.1.5",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0016",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 2 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-001 | 문서명: 정보보호 조직 운영 지침 | 주관부서: 정보보호팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 1.1.2, 1.1.3",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0017",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 3 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-002 | 문서명: 정보자산 관리 지침 | 주관부서: 정보보호팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 1.2.1, 2.1.3",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 3
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0018",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 4 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-003 | 문서명: 위험관리 지침 | 주관부서: 정보보호팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 1.2.2 ~ 1.2.4",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 4
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0019",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 5 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-004 | 문서명: 인적 보안 지침 | 주관부서: 경영지원팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 2.2.1 ~ 2.2.6",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 5
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0020",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 6 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-005 | 문서명: 외부자 보안 지침 | 주관부서: 정보보호팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 2.3.1 ~ 2.3.4",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 6
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0021",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 7 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-006 | 문서명: 물리 보안 지침 | 주관부서: 경영지원팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 2.4.1 ~ 2.4.7",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 7
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0022",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 8 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-007 | 문서명: 인증 및 권한관리 지침 | 주관부서: 정보보호팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 2.5.1 ~ 2.5.6",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 8
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0023",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 9 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-008 | 문서명: 접근통제 지침 | 주관부서: 정보보호팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 2.6.1 ~ 2.6.7",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 9
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0024",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 10 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-009 | 문서명: 암호화 지침 | 주관부서: 정보보호팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 2.7.1, 2.7.2",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 10
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0025",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 11 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-010 | 문서명: 시스템 개발·도입 보안 지침 | 주관부서: 개발팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 2.8.1 ~ 2.8.6",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 11
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0026",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 12 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-011 | 문서명: 시스템·서비스 운영관리 지침 | 주관부서: 인프라팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 2.9.1 ~ 2.9.7",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 12
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0027",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 13 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-012 | 문서명: 시스템·서비스 보안관리 지침 (온프레미스) | 주관부서: 정보보호팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 2.10.1 ~ 2.10.9",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 13
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0028",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 14 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-013 | 문서명: 서버실 운영 및 출입통제 지침 | 주관부서: 인프라팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 2.4.2",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 14
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0029",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 15 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-014 | 문서명: 침해사고 대응 지침 | 주관부서: 정보보호팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 2.11.1 ~ 2.11.5",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 15
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0030",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 16 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-015 | 문서명: 재해복구 지침 (BCP/DRP) | 주관부서: 인프라팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CISO (김보안) | 보안등급: 대내한 | 관련 인증기준: 2.12.1, 2.12.2",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 16
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0031",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 17 | 계층: 2계층 | 문서번호: BBL-ISMS-2026-GDL-016 | 문서명: 개인정보처리 지침 | 주관부서: 정보보호팀 | 제정일: 2026-01-01 | 최종 개정일: 2026-01-01 | 버전: v1.1 | 승인자: CPO (김밤티) | 보안등급: 대내한 | 관련 인증기준: 3.1 ~ 3.5",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 17
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0032",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 18 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-001 | 문서명: 정보보호 위원회 운영 절차 | 주관부서: 정보보호팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 1.1.3",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 18
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0033",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 19 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-002 | 문서명: 정보자산 식별 및 평가 절차 | 주관부서: 정보보호팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 1.2.1",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 19
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0034",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 20 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-003 | 문서명: 위험평가 수행 절차 | 주관부서: 정보보호팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 1.2.3",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 20
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0035",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 21 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-004 | 문서명: 계정 및 접근권한 관리 절차 | 주관부서: 개발팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.5",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 21
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0036",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 22 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-005 | 문서명: 비밀번호 관리 절차 | 주관부서: 정보보호팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.5.4",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 22
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0037",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 23 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-006 | 문서명: 서버·DBMS 보안 패치 관리 절차 | 주관부서: 인프라팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.10.8",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 23
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0038",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 24 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-007 | 문서명: 백업 및 복구 절차 (NAS 운영) | 주관부서: 인프라팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.9.3",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 24
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0039",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 25 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-008 | 문서명: 로그 수집·관리 및 점검 절차 | 주관부서: 정보보호팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.9.4, 2.9.5",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 25
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0040",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 26 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-009 | 문서명: 취약점 점검 절차 | 주관부서: 정보보호팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.11.2",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 26
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0041",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 27 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-010 | 문서명: 침해사고 대응 절차 | 주관부서: 정보보호팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대외비 | 관련 인증기준: 2.11",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 27
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0042",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 28 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-011 | 문서명: 서버실 출입통제 및 시건 절차 | 주관부서: 인프라팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.4.2",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 28
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0043",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 29 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-012 | 문서명: 외부자(수탁사) 관리 절차 | 주관부서: 정보보호팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.3",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 29
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0044",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 30 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-013 | 문서명: 개인정보 수집·이용 동의 절차 | 주관부서: 정보보호팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: CPO | 보안등급: 대내한 | 관련 인증기준: 3.1.1",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 30
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0045",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 31 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-014 | 문서명: 개인정보 파기 절차 | 주관부서: 정보보호팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: CPO | 보안등급: 대내한 | 관련 인증기준: 3.4.1",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 31
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0046",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 32 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-015 | 문서명: 정보주체 권리행사 처리 절차 | 주관부서: 고객지원팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: CPO | 보안등급: 대내한 | 관련 인증기준: 3.5.1, 3.5.2",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 32
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0047",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 33 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-016 | 문서명: 개인정보 영향평가 절차 | 주관부서: 정보보호팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: CPO | 보안등급: 대내한 | 관련 인증기준: 1.2.3",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 33
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0048",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 34 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-017 | 문서명: 개인정보 유출 통지·신고 절차 | 주관부서: 정보보호팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: CPO | 보안등급: 대외비 | 관련 인증기준: 2.11.5",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 34
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0049",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 35 | 계층: 3계층 | 문서번호: BBL-ISMS-2026-PRC-018 | 문서명: 교육·인식제고 운영 절차 | 주관부서: 경영지원팀 | 제정일: 2026-01-10 | 최종 개정일: 2026-01-10 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.2.4",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 35
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0050",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 36 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-001 | 문서명: 관리체계 범위 정의서 | 주관부서: 정보보호팀 | 제정일: 2026-01-20 | 최종 개정일: 2026-01-20 | 버전: v1.1 | 승인자: 대표이사 (김밤티) | 보안등급: 대내한 | 관련 인증기준: 1.1.4",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 36
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0051",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 37 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-002 | 문서명: 정보자산 및 개인정보 목록 | 주관부서: 정보보호팀 | 제정일: 2026-01-20 | 최종 개정일: 2026-01-20 | 버전: v1.1 | 승인자: 정보보안팀장 | 보안등급: 대외비 | 관련 인증기준: 1.2.1",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 37
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0052",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 38 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-003 | 문서명: 계정 신청·변경·삭제 신청서 | 주관부서: 개발팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.5.1",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 38
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0053",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 39 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-004 | 문서명: 접근권한 검토서 | 주관부서: 정보보호팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.5.6",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 39
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0054",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 40 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-005 | 문서명: 취약점 점검 결과 보고서 | 주관부서: 정보보호팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대외비 | 관련 인증기준: 2.11.2",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 40
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0055",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 41 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-006 | 문서명: 침해사고 신고서 | 주관부서: 정보보호팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대외비 | 관련 인증기준: 2.11.5",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 41
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0056",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 42 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-007 | 문서명: 보안서약서 (임직원·외부자) | 주관부서: 경영지원팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.2.3",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 42
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0057",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 43 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-008 | 문서명: 외부자(PG·SMS·메일) 보안점검 체크리스트 | 주관부서: 정보보호팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.3.3",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 43
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0058",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 44 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-009 | 문서명: 개인정보 수집·이용 동의서 양식 | 주관부서: 정보보호팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: CPO | 보안등급: 대내한 | 관련 인증기준: 3.1.1",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 44
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0059",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 45 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-010 | 문서명: 개인정보 처리위탁 계약서 양식 | 주관부서: 정보보호팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: CPO | 보안등급: 대내한 | 관련 인증기준: 3.3.2",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 45
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0060",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 46 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-011 | 문서명: 개인정보 파기 결과서 | 주관부서: 정보보호팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: CPO | 보안등급: 대내한 | 관련 인증기준: 3.4.1",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 46
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0061",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 47 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-012 | 문서명: 교육 결과 보고서 | 주관부서: 경영지원팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: 정보보안팀장 | 보안등급: 대내한 | 관련 인증기준: 2.2.4",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 47
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0062",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 48 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-013 | 문서명: 내부감사 결과 보고서 | 주관부서: 정보보호팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: 대표이사 | 보안등급: 대외비 | 관련 인증기준: 1.4.2",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 48
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0063",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 49 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-014 | 문서명: 정보주체 권리행사 처리대장 | 주관부서: 고객지원팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: CPO | 보안등급: 대외비 | 관련 인증기준: 3.5.1",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 49
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0064",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 50 | 계층: 4계층 | 문서번호: BBL-ISMS-2026-FRM-015 | 문서명: 개인정보 처리방침 (홈페이지 공개용) | 주관부서: 정보보호팀 | 제정일: 2026-01-15 | 최종 개정일: 2026-01-15 | 버전: v1.0 | 승인자: CPO | 보안등급: 공개 | 관련 인증기준: 3.5.3",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 50
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0065",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 51 | 계층: 별도 | 문서번호: 배워볼LANG-인사-2025-001 | 문서명: CISO/CPO 인사발령 공문 | 주관부서: 경영지원팀 | 제정일: 2025-01-15 | 최종 개정일: 2025-01-15 | 버전: v1.0 | 승인자: 대표이사 | 보안등급: 대내한 | 관련 인증기준: 1.1.2",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 51
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0066",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 52 | 계층: 별도 | 문서번호: BBL-ISMS-2025-004 | 문서명: 2026년도 정보보호 추진계획서 | 주관부서: 정보보호팀 | 제정일: 2026-01-20 | 최종 개정일: 2026-01-20 | 버전: v1.0 | 승인자: 대표이사 | 보안등급: 대내한 | 관련 인증기준: 1.1.6",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 52
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0067",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "No: 53 | 계층: 별도 | 문서번호: BBL-ISMS-2026-ORG-001 | 문서명: 정보보호 및 개인정보보호 조직도 및 직무기술서 | 주관부서: 정보보호팀 | 제정일: 2025-01-16 | 최종 개정일: 2025-01-16 | 버전: v1.0 | 승인자: 대표이사 | 보안등급: 대내한 | 관련 인증기준: 1.1.2, 1.1.3",
+    "metadata": {
+      "section": "문서목록 > ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+      "row_no": 53
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0068",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "1계층 (정책): 2계층 (지침) | 1건: 16건",
+    "metadata": {
+      "section": "문서목록 > ▣ 문서 통계 (2026-01-20 기준)",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0069",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "1계층 (정책): 3계층 (절차) | 1건: 18건",
+    "metadata": {
+      "section": "문서목록 > ▣ 문서 통계 (2026-01-20 기준)",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0070",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "1계층 (정책): 4계층 (양식) | 1건: 15건",
+    "metadata": {
+      "section": "문서목록 > ▣ 문서 통계 (2026-01-20 기준)",
+      "row_no": 3
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0071",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "1계층 (정책): 별도 관리 | 1건: 3건",
+    "metadata": {
+      "section": "문서목록 > ▣ 문서 통계 (2026-01-20 기준)",
+      "row_no": 4
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 49,
+    "chunk_id": "문서 목록-0072",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "1계층 (정책): 합     계 | 1건: 53건",
+    "metadata": {
+      "section": "문서목록 > ▣ 문서 통계 (2026-01-20 기준)",
+      "row_no": 5
+    },
+    "user_selection": null
+  }
+]

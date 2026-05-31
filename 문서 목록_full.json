@@ -1,0 +1,772 @@
+[
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0001",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: Information Security & Privacy Management System Document Inventory",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0002",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 문 서 번 호",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0003",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 문 서 명",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0004",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 관련 인증기준",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0005",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 작 성 부 서",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0006",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 작 성 자",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0007",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 작 성 일 자",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0008",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 승 인 자",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0009",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 문 서 버 전",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0010",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 보 안 등 급",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0011",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: ▣ 문서 체계 (4계층 / 문서번호 체계)",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0012",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 계층",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0013",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 1계층",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0014",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 2계층",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0015",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 3계층",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0016",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 4계층",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0017",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: ※ YYYY: 제정연도 / NNN: 일련번호 (3자리)",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0018",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: ▣ 문서 개정 이력",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0019",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 차수",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0020",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 1",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0021",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 2",
+    "metadata": {
+      "section": "문서정보"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0022",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: ㆍ작성기준일: 2026-01-20  ㆍ작성부서: 정보보호팀  ㆍ문서고: 사내 파일서버 (FILE-01) 정보보호팀 전용 폴더 + 잠금 캐비닛 (원본)",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0023",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: No | : 관련 인증기준",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0024",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 1 | : 1.1.5",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0025",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 2 | : 1.1.2, 1.1.3",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0026",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 3 | : 1.2.1, 2.1.3",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0027",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 4 | : 1.2.2 ~ 1.2.4",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0028",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 5 | : 2.2.1 ~ 2.2.6",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0029",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 6 | : 2.3.1 ~ 2.3.4",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0030",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 7 | : 2.4.1 ~ 2.4.7",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0031",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 8 | : 2.5.1 ~ 2.5.6",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0032",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 9 | : 2.6.1 ~ 2.6.7",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0033",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 10 | : 2.7.1, 2.7.2",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0034",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 11 | : 2.8.1 ~ 2.8.6",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0035",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 12 | : 2.9.1 ~ 2.9.7",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0036",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 13 | : 2.10.1 ~ 2.10.9",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0037",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 14 | : 2.4.2",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0038",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 15 | : 2.11.1 ~ 2.11.5",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0039",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 16 | : 2.12.1, 2.12.2",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0040",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 17 | : 3.1 ~ 3.5",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0041",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 18 | : 1.1.3",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0042",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 19 | : 1.2.1",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0043",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 20 | : 1.2.3",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0044",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 21 | : 2.5",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0045",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 22 | : 2.5.4",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0046",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 23 | : 2.10.8",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0047",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 24 | : 2.9.3",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0048",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 25 | : 2.9.4, 2.9.5",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0049",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 26 | : 2.11.2",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0050",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 27 | : 2.11",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0051",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 28 | : 2.4.2",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0052",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 29 | : 2.3",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0053",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 30 | : 3.1.1",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0054",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 31 | : 3.4.1",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0055",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 32 | : 3.5.1, 3.5.2",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0056",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 33 | : 1.2.3",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0057",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 34 | : 2.11.5",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0058",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 35 | : 2.2.4",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0059",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 36 | : 1.1.4",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0060",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 37 | : 1.2.1",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0061",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 38 | : 2.5.1",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0062",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 39 | : 2.5.6",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0063",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 40 | : 2.11.2",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0064",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 41 | : 2.11.5",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0065",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 42 | : 2.2.3",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0066",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 43 | : 2.3.3",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0067",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 44 | : 3.1.1",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0068",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 45 | : 3.3.2",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0069",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 46 | : 3.4.1",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0070",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 47 | : 2.2.4",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0071",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 48 | : 1.4.2",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0072",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 49 | : 3.5.1",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0073",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 50 | : 3.5.3",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0074",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 51 | : 1.1.2",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0075",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 52 | : 1.1.6",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0076",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: 53 | : 1.1.2, 1.1.3",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 39,
+    "chunk_id": "문서 목록-0077",
+    "evidence_name": "문서 목록.xlsx",
+    "content": "정보보호 및 개인정보보호 관리체계 문서 목록: ▣ 문서 통계 (2026-01-20 기준)",
+    "metadata": {
+      "section": "문서목록"
+    },
+    "user_selection": null
+  }
+]

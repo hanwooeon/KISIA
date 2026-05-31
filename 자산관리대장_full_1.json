@@ -1,0 +1,552 @@
+[
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0001",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": "문서버전: 수행사 | 1: ㅇㅇㅇ",
+    "metadata": {
+      "section": "표지 > 회사명: ㈜배워볼LANG",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0002",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": "문서버전: 작성자 | 1: 김보안",
+    "metadata": {
+      "section": "표지 > 회사명: ㈜배워볼LANG",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0003",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": "v2.0: 차수 | 2026년 자산 현황 최신화 반영 (기준일 2026.01.15 갱신): Version | 2026-01-15 00:00:00: 개정내용 | 정보보호팀: 개정일자",
+    "metadata": {
+      "section": "제∙개정 이력 > 제∙개정 이력",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0004",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": "v2.0: 1 | 2026년 자산 현황 최신화 반영 (기준일 2026.01.15 갱신): v1.0 | 2026-01-15 00:00:00: 배워볼LANG 정보자산 관리대장 최초 제정 | 정보보호팀: 2024-05-07 00:00:00",
+    "metadata": {
+      "section": "제∙개정 이력 > 제∙개정 이력",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0005",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": "No: 1 | 분류: 서버 | 설명: 사용자에게 특정 서비스를 제공하기 위한 기능의 운영체제 및 프로그램이 설치되어 있는 장비 | 코드명: SE | 비고: Windows / Linux / Unix Server 등",
+    "metadata": {
+      "section": "자산분류기준 > 다. DBMS 운영 기준",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0006",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": "No: 2 | 분류: 정보보호시스템 | 설명: 서비스 보안 운영을 위한 장비 | 코드명: SS | 비고: 방화벽, VPN, 네트워크 접근제어(NAC) 등",
+    "metadata": {
+      "section": "자산분류기준 > 다. DBMS 운영 기준",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0007",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": "No: 3 | 분류: 네트워크 장비 | 설명: 서비스 운영 및 제반 업무를 위해 설치된 네트워크 장비 | 코드명: NW | 비고: 공유기, 라우터, 허브, 스위치(L4/L3/L2) 등",
+    "metadata": {
+      "section": "자산분류기준 > 다. DBMS 운영 기준",
+      "row_no": 3
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0008",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": "No: 4 | 분류: DBMS | 설명: 사용자가 데이터에 접근하여 데이터를 저장 및 관리 등의 기능을 제공하는 응용 소프트웨어 | 코드명: DB | 비고: MySQL, Oracle, MSSQL, MariaDB 등",
+    "metadata": {
+      "section": "자산분류기준 > 다. DBMS 운영 기준",
+      "row_no": 4
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0009",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": "No: 5 | 분류: PC | 설명: 업무 수행을 목적으로 정보를 처리하는 단말기 | 코드명: PC | 비고: 데스크탑, 노트북 등",
+    "metadata": {
+      "section": "자산분류기준 > 다. DBMS 운영 기준",
+      "row_no": 5
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0010",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": "No: 6 | 분류: 홈페이지 | 설명: 회사, 제품, 판매 등 정보 및 서비스를 제공하기 위하여 인터넷상 구축·운영되는 서비스 | 코드명: WEB | 비고: 회사 대표 홈페이지, 회원제 상물몰 등",
+    "metadata": {
+      "section": "자산분류기준 > 다. DBMS 운영 기준",
+      "row_no": 6
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0011",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": "No: 7 | 분류: 개인정보 | 설명: 고객 정보 관리·보유 여부 | 비고: 웹 상 회원가입(이용자 정보) 수집 등",
+    "metadata": {
+      "section": "자산분류기준 > 다. DBMS 운영 기준",
+      "row_no": 7
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0012",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": "분류: 기밀성(C) | 설명: 극비 또는 비 등급의 정보 등 노출 또는 누설 시 해당 조직에 중대한 손실 또는 불이익을 입거나, 또는 그러한 우려가 있는 경우 | 평가: 상(3)",
+    "metadata": {
+      "section": "중요도평가기준 > 다. 정보보호 특성",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0013",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 1 | 구분: Linux 서버 | 자산코드(있을 시 기입): SE-001 | 자산명: WEB-01 | 설명: 대표 홈페이지 및 LMS 웹서비스 운영 | 운영체제: Ubuntu Server 22.04 LTS | 기종: Dell PowerEdge R350 | IP: 10.10.10.11 | 대수: 1 | 위치: 사내 서버실 | 운영자: 김민수 | 책임자: 김민수 | 관리부서: 개발팀 | 기밀성(C): 3 | 무결성(I): 3 | 가용성(A): 3 | 합계: 9 | 자산등급: 1등급",
+    "metadata": {
+      "section": "1. 서버 > 서버 목록",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0014",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 2 | 구분: Linux 서버 | 자산코드(있을 시 기입): SE-002 | 자산명: WAS-01 | 설명: LMS 애플리케이션 및 모바일 API 운영 | 운영체제: Ubuntu Server 22.04 LTS | 기종: Dell PowerEdge R350 | IP: 10.10.10.12 | 대수: 1 | 위치: 사내 서버실 | 운영자: 박지훈 | 책임자: 김민수 | 관리부서: 개발팀 | 기밀성(C): 3 | 무결성(I): 3 | 가용성(A): 3 | 합계: 9 | 자산등급: 1등급",
+    "metadata": {
+      "section": "1. 서버 > 서버 목록",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0015",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 3 | 구분: Linux 서버 | 자산코드(있을 시 기입): SE-003 | 자산명: DB-01 | 설명: MariaDB 운영: 회원·결제·학습 데이터 저장 | 운영체제: Rocky Linux 9 | 기종: Dell PowerEdge R450 | IP: 10.10.10.21 | 대수: 1 | 위치: 사내 서버실 | 운영자: 박지훈 | 책임자: 김민수 | 관리부서: 개발팀 | 기밀성(C): 3 | 무결성(I): 3 | 가용성(A): 3 | 합계: 9 | 자산등급: 1등급",
+    "metadata": {
+      "section": "1. 서버 > 서버 목록",
+      "row_no": 3
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0016",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 4 | 구분: Linux 서버 | 자산코드(있을 시 기입): SE-004 | 자산명: LOG-01 | 설명: 웹/WAS/DB/방화벽 접속로그 및 보안로그 통합 저장 | 운영체제: Rocky Linux 9 | 기종: Dell PowerEdge R350 | IP: 10.10.10.31 | 대수: 1 | 위치: 사내 서버실 | 운영자: 이서연 | 책임자: 김민수 | 관리부서: 정보보호팀 | 기밀성(C): 2 | 무결성(I): 3 | 가용성(A): 2 | 합계: 7 | 자산등급: 2등급",
+    "metadata": {
+      "section": "1. 서버 > 서버 목록",
+      "row_no": 4
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0017",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 5 | 구분: NAS | 자산코드(있을 시 기입): SE-005 | 자산명: BACKUP-01 | 설명: DB 덤프 및 중요 파일 백업 | 운영체제: Synology DSM 7.2 | 기종: Synology RS822+ | IP: 10.10.10.41 | 대수: 1 | 위치: 사내 서버실 | 운영자: 김민수 | 책임자: 김민수 | 관리부서: 인프라팀 | 기밀성(C): 2 | 무결성(I): 3 | 가용성(A): 3 | 합계: 8 | 자산등급: 1등급",
+    "metadata": {
+      "section": "1. 서버 > 서버 목록",
+      "row_no": 5
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0018",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 6 | 구분: Linux 서버 | 자산코드(있을 시 기입): SE-006 | 자산명: DEV-01 | 설명: 개발 및 테스트 환경 운영 | 운영체제: Ubuntu Server 22.04 LTS | 기종: Mini Server | IP: 10.10.20.11 | 대수: 1 | 위치: 사내 서버실 | 운영자: 박지훈 | 책임자: 김민수 | 관리부서: 개발팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 2 | 합계: 6 | 자산등급: 2등급",
+    "metadata": {
+      "section": "1. 서버 > 서버 목록",
+      "row_no": 6
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0019",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 7 | 구분: Windows 서버 | 자산코드(있을 시 기입): SE-007 | 자산명: FILE-01 | 설명: 부서 공유파일 및 내부 문서 저장 | 운영체제: Windows Server 2019 | 기종: HP ProLiant ML350 | IP: 10.10.30.15 | 대수: 1 | 위치: 사내 서버실 | 운영자: 최은지 | 책임자: 최은지 | 관리부서: 경영지원팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 2 | 합계: 6 | 자산등급: 2등급",
+    "metadata": {
+      "section": "1. 서버 > 서버 목록",
+      "row_no": 7
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0020",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 8 | 구분: Linux 서버 | 자산코드(있을 시 기입): SE-008 | 자산명: MONITOR-01 | 설명: 서버 상태 및 디스크 사용량 모니터링 | 운영체제: Ubuntu Server 22.04 LTS | 기종: Mini Server | IP: 10.10.30.25 | 대수: 1 | 위치: 사내 서버실 | 운영자: 김민수 | 책임자: 김민수 | 관리부서: 인프라팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 2 | 합계: 6 | 자산등급: 2등급",
+    "metadata": {
+      "section": "1. 서버 > 서버 목록",
+      "row_no": 8
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0021",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 9 | 구분: Windows 서버 | 자산코드(있을 시 기입): SE-009 | 자산명: GW-01 | 설명: 그룹웨어 및 전자결재 서버 | 운영체제: Windows Server 2019 | 기종: HP ProLiant ML110 | IP: 10.10.30.50 | 대수: 1 | 위치: 사내 서버실 | 운영자: 최은지 | 책임자: 최은지 | 관리부서: 경영지원팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 3 | 합계: 7 | 자산등급: 2등급",
+    "metadata": {
+      "section": "1. 서버 > 서버 목록",
+      "row_no": 9
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0022",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 1 | 구분: UTM | 자산코드(있을 시 기입): SS-001 | 자산명: 방화벽/UTM | 설명: 사내 서버실 외부/내부망 접근통제 | 운영체제: FortiOS 7.x | 기종: Fortigate 80F | IP: 203.0.113.10 | 대수: 1 | 위치: 사내 서버실 | 운영자: 이서연 | 책임자: 김민수 | 관리부서: 정보보호팀 | 기밀성(C): 3 | 무결성(I): 3 | 가용성(A): 3 | 합계: 9 | 자산등급: 1등급",
+    "metadata": {
+      "section": "2. 정보보호시스템 > 정보보호시스템 목록",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0023",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 2 | 구분: VPN | 자산코드(있을 시 기입): SS-002 | 자산명: VPN 장비 | 설명: 원격 유지보수 접속통제 | 운영체제: FortiOS 7.x | 기종: Fortigate SSL-VPN | IP: 203.0.113.11 | 대수: 1 | 위치: 사내 서버실 | 운영자: 이서연 | 책임자: 김민수 | 관리부서: 정보보호팀 | 기밀성(C): 3 | 무결성(I): 3 | 가용성(A): 2 | 합계: 8 | 자산등급: 1등급",
+    "metadata": {
+      "section": "2. 정보보호시스템 > 정보보호시스템 목록",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0024",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 3 | 구분: 백신관리 | 자산코드(있을 시 기입): SS-003 | 자산명: 백신 중앙관리 | 설명: 임직원 PC 악성코드 방지 | 운영체제: Windows Server 2019 | 기종: V3 Office Security | IP: 10.10.30.10 | 대수: 1 | 위치: 사무실 | 운영자: 이서연 | 책임자: 최은지 | 관리부서: 정보보호팀 | 기밀성(C): 2 | 무결성(I): 3 | 가용성(A): 2 | 합계: 7 | 자산등급: 2등급",
+    "metadata": {
+      "section": "2. 정보보호시스템 > 정보보호시스템 목록",
+      "row_no": 3
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0025",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 4 | 구분: 접근통제 | 자산코드(있을 시 기입): SS-004 | 자산명: 관리자 MFA | 설명: 관리자 페이지 2차 인증 | 운영체제: Application | 기종: Google OTP 연동 | IP: 10.10.10.12 | 대수: 1 | 위치: 사내 서버실 | 운영자: 박지훈 | 책임자: 김민수 | 관리부서: 개발팀 | 기밀성(C): 3 | 무결성(I): 3 | 가용성(A): 2 | 합계: 8 | 자산등급: 1등급",
+    "metadata": {
+      "section": "2. 정보보호시스템 > 정보보호시스템 목록",
+      "row_no": 4
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0026",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 5 | 구분: 로그관리 | 자산코드(있을 시 기입): SS-005 | 자산명: Syslog 수집기 | 설명: 서버·방화벽 로그 수집 | 운영체제: Linux | 기종: rsyslog | IP: 10.10.10.31 | 대수: 1 | 위치: 사내 서버실 | 운영자: 이서연 | 책임자: 김민수 | 관리부서: 정보보호팀 | 기밀성(C): 2 | 무결성(I): 3 | 가용성(A): 2 | 합계: 7 | 자산등급: 2등급",
+    "metadata": {
+      "section": "2. 정보보호시스템 > 정보보호시스템 목록",
+      "row_no": 5
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0027",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 6 | 구분: 매체제어 | 자산코드(있을 시 기입): SS-006 | 자산명: USB 사용통제 | 설명: 업무용 PC 저장매체 통제 | 운영체제: Windows Agent | 기종: V3 USB Control | IP: 사내망 | 대수: 50 | 위치: 사무실 | 운영자: 이서연 | 책임자: 최은지 | 관리부서: 정보보호팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 2 | 합계: 6 | 자산등급: 2등급",
+    "metadata": {
+      "section": "2. 정보보호시스템 > 정보보호시스템 목록",
+      "row_no": 6
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0028",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 1 | 구분: L3 스위치 | 자산코드(있을 시 기입): NW-001 | 자산명: Core Switch | 설명: 사내 서버실 서버망 코어 스위치 | 운영체제: Cisco IOS | 기종: Cisco Catalyst 9300 | IP: 10.10.10.1 | 대수: 1 | 위치: 사내 서버실 | 운영자: 김민수 | 책임자: 김민수 | 관리부서: 인프라팀 | 기밀성(C): 2 | 무결성(I): 3 | 가용성(A): 3 | 합계: 8 | 자산등급: 1등급",
+    "metadata": {
+      "section": "3. 네트워크 장비 > 네트워크 목록",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0029",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 2 | 구분: L2 스위치 | 자산코드(있을 시 기입): NW-002 | 자산명: Server Switch | 설명: 사내 서버실 서버 연결 스위치 | 운영체제: Cisco IOS | 기종: Cisco Catalyst 2960X | IP: 10.10.10.2 | 대수: 1 | 위치: 사내 서버실 | 운영자: 김민수 | 책임자: 김민수 | 관리부서: 인프라팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 3 | 합계: 7 | 자산등급: 2등급",
+    "metadata": {
+      "section": "3. 네트워크 장비 > 네트워크 목록",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0030",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 3 | 구분: 라우터 | 자산코드(있을 시 기입): NW-003 | 자산명: Internet Router | 설명: 인터넷 회선 연결 | 운영체제: Cisco IOS | 기종: Cisco ISR 4321 | IP: 203.0.113.1 | 대수: 1 | 위치: 사내 서버실 | 운영자: 김민수 | 책임자: 김민수 | 관리부서: 인프라팀 | 기밀성(C): 2 | 무결성(I): 3 | 가용성(A): 3 | 합계: 8 | 자산등급: 1등급",
+    "metadata": {
+      "section": "3. 네트워크 장비 > 네트워크 목록",
+      "row_no": 3
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0031",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 4 | 구분: L2 스위치 | 자산코드(있을 시 기입): NW-004 | 자산명: Office Switch | 설명: 사무실 업무망 스위치 | 운영체제: Cisco IOS | 기종: Cisco CBS350 | IP: 10.10.30.1 | 대수: 2 | 위치: 사내 서버실 | 운영자: 김민수 | 책임자: 최은지 | 관리부서: 경영지원팀 | 기밀성(C): 1 | 무결성(I): 2 | 가용성(A): 2 | 합계: 5 | 자산등급: 2등급",
+    "metadata": {
+      "section": "3. 네트워크 장비 > 네트워크 목록",
+      "row_no": 4
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0032",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 5 | 구분: 무선 AP | 자산코드(있을 시 기입): NW-005 | 자산명: Office Wi-Fi AP | 설명: 사무실 무선망 | 운영체제: 전용 OS | 기종: Aruba Instant On AP22 | IP: 10.10.30.20 | 대수: 3 | 위치: 사내 서버실 | 운영자: 김민수 | 책임자: 최은지 | 관리부서: 경영지원팀 | 기밀성(C): 1 | 무결성(I): 2 | 가용성(A): 2 | 합계: 5 | 자산등급: 2등급",
+    "metadata": {
+      "section": "3. 네트워크 장비 > 네트워크 목록",
+      "row_no": 5
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0033",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 6 | 구분: NAT 장비 | 자산코드(있을 시 기입): NW-006 | 자산명: NAT Gateway | 설명: 내부망 인터넷 접속 | 운영체제: 전용 OS | 기종: ipTIME G104 | IP: 10.10.30.254 | 대수: 1 | 위치: 사내 서버실 | 운영자: 김민수 | 책임자: 최은지 | 관리부서: 경영지원팀 | 기밀성(C): 1 | 무결성(I): 2 | 가용성(A): 2 | 합계: 5 | 자산등급: 2등급",
+    "metadata": {
+      "section": "3. 네트워크 장비 > 네트워크 목록",
+      "row_no": 6
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0034",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 1 | 구분: DBMS | 자산코드(있을 시 기입): DB-001 | 자산명: MariaDB-MEMBER | 버전: 10.6 | 유형(DBMS): MariaDB | 용도: 회원정보, 로그인, 권한, 약관동의 이력 저장 | IP: 10.10.10.21 | Port: 3306 | 대수: 1 | 설치 플랫폼(OS): Rocky Linux 9 | 위치: 사내 서버실 | 운영자: 박지훈 | 책임자: 김민수 | 관리부서: 개발팀 | 기밀성(C): 3 | 무결성(I): 3 | 가용성(A): 3 | 합계: 9 | 자산등급: 1등급",
+    "metadata": {
+      "section": "4. DBMS > DBMS 목록",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0035",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 2 | 구분: DBMS | 자산코드(있을 시 기입): DB-002 | 자산명: MariaDB-LEARNING | 버전: 10.6 | 유형(DBMS): MariaDB | 용도: 학습진도, 수강이력, 퀴즈결과, 수료정보 저장 | IP: 10.10.10.21 | Port: 3306 | 대수: 1 | 설치 플랫폼(OS): Rocky Linux 9 | 위치: 사내 서버실 | 운영자: 박지훈 | 책임자: 김민수 | 관리부서: 개발팀 | 기밀성(C): 2 | 무결성(I): 3 | 가용성(A): 3 | 합계: 8 | 자산등급: 1등급",
+    "metadata": {
+      "section": "4. DBMS > DBMS 목록",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0036",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 3 | 구분: DBMS | 자산코드(있을 시 기입): DB-003 | 자산명: MariaDB-CONTENTS | 버전: 10.6 | 유형(DBMS): MariaDB | 용도: 강의 메타데이터, 콘텐츠 목록, 강사정보 저장 | IP: 10.10.10.21 | Port: 3306 | 대수: 1 | 설치 플랫폼(OS): Rocky Linux 9 | 위치: 사내 서버실 | 운영자: 박지훈 | 책임자: 김민수 | 관리부서: 개발팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 2 | 합계: 6 | 자산등급: 2등급",
+    "metadata": {
+      "section": "4. DBMS > DBMS 목록",
+      "row_no": 3
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0037",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 4 | 구분: DBMS | 자산코드(있을 시 기입): DB-004 | 자산명: MariaDB-BOARD | 버전: 10.6 | 유형(DBMS): MariaDB | 용도: 공지사항, FAQ, 고객문의, 환불문의 저장 | IP: 10.10.10.21 | Port: 3306 | 대수: 1 | 설치 플랫폼(OS): Rocky Linux 9 | 위치: 사내 서버실 | 운영자: 한지민 | 책임자: 최은지 | 관리부서: 고객지원팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 2 | 합계: 6 | 자산등급: 2등급",
+    "metadata": {
+      "section": "4. DBMS > DBMS 목록",
+      "row_no": 4
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0038",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 5 | 구분: DBMS | 자산코드(있을 시 기입): DB-005 | 자산명: GROUPWARE-DB | 버전: 2019 | 유형(DBMS): MS SQL Server Express | 용도: 전자결재, 근태, 내부공지, 조직도 데이터 저장 | IP: 10.10.30.50 | Port: 1433 | 대수: 1 | 설치 플랫폼(OS): Windows Server 2019 | 위치: 사내 서버실 | 운영자: 최은지 | 책임자: 최은지 | 관리부서: 경영지원팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 3 | 합계: 7 | 자산등급: 2등급",
+    "metadata": {
+      "section": "4. DBMS > DBMS 목록",
+      "row_no": 5
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0039",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 1 | 구분: 업무용 노트북 | 자산코드(있을 시 기입): PC-001 | 사용자: 개발팀 | 부서: 개발팀 | 운영체제: Windows 11 Pro | 대수: 12 | 운영자: 각 사용자 | 책임자: 박지훈 | 관리부서: 개발팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 2 | 합계: 6 | 자산등급: 2등급",
+    "metadata": {
+      "section": "5. PC > PC 목록",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0040",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 2 | 구분: 업무용 노트북 | 자산코드(있을 시 기입): PC-002 | 사용자: 콘텐츠팀 | 부서: 콘텐츠팀 | 운영체제: Windows 11 Pro | 대수: 10 | 운영자: 각 사용자 | 책임자: 이서연 | 관리부서: 콘텐츠팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 2 | 합계: 6 | 자산등급: 2등급",
+    "metadata": {
+      "section": "5. PC > PC 목록",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0041",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 3 | 구분: 업무용 노트북 | 자산코드(있을 시 기입): PC-003 | 사용자: 고객지원팀 | 부서: 고객지원팀 | 운영체제: Windows 11 Pro | 대수: 8 | 운영자: 각 사용자 | 책임자: 한지민 | 관리부서: 고객지원팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 2 | 합계: 6 | 자산등급: 2등급",
+    "metadata": {
+      "section": "5. PC > PC 목록",
+      "row_no": 3
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0042",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 4 | 구분: 업무용 노트북 | 자산코드(있을 시 기입): PC-004 | 사용자: 마케팅팀 | 부서: 마케팅팀 | 운영체제: Windows 11 Pro | 대수: 7 | 운영자: 각 사용자 | 책임자: 정다은 | 관리부서: 마케팅팀 | 기밀성(C): 1 | 무결성(I): 2 | 가용성(A): 2 | 합계: 5 | 자산등급: 2등급",
+    "metadata": {
+      "section": "5. PC > PC 목록",
+      "row_no": 4
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0043",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 5 | 구분: 업무용 노트북 | 자산코드(있을 시 기입): PC-005 | 사용자: 경영지원팀 | 부서: 경영지원팀 | 운영체제: Windows 11 Pro | 대수: 6 | 운영자: 각 사용자 | 책임자: 최은지 | 관리부서: 경영지원팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 2 | 합계: 6 | 자산등급: 2등급",
+    "metadata": {
+      "section": "5. PC > PC 목록",
+      "row_no": 5
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0044",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 6 | 구분: 업무용 데스크탑 | 자산코드(있을 시 기입): PC-006 | 사용자: 공용 교육장 PC | 부서: 운영지원 | 운영체제: Windows 10 Pro | 대수: 4 | 운영자: 운영지원 | 책임자: 한지민 | 관리부서: 고객지원팀 | 기밀성(C): 1 | 무결성(I): 2 | 가용성(A): 1 | 합계: 4 | 자산등급: 3등급",
+    "metadata": {
+      "section": "5. PC > PC 목록",
+      "row_no": 6
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0045",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 7 | 구분: 관리자 전용 PC | 자산코드(있을 시 기입): PC-007 | 사용자: 서비스 관리자 | 부서: 정보보호팀 | 운영체제: Windows 11 Pro | 대수: 3 | 운영자: 관리자 | 책임자: 이서연 | 관리부서: 정보보호팀 | 기밀성(C): 3 | 무결성(I): 3 | 가용성(A): 2 | 합계: 8 | 자산등급: 1등급",
+    "metadata": {
+      "section": "5. PC > PC 목록",
+      "row_no": 7
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0046",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 1 | 구분: WEB | 자산코드(있을 시 기입): WEB-001 | 자산명: 대표 홈페이지 | 설명: 회사 소개, 서비스 안내, 공지사항 게시 | 개발 담당자: 박개발 | 구축 업체: 자체 개발 | URL: https://epilepsy-squiggly-shallot.ngrok-free.dev/ | 운영자: 박지훈 | 책임자: 김민수 | 관리부서: 개발팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 3 | 합계: 7 | 자산등급: 2등급",
+    "metadata": {
+      "section": "6. 홈페이지 > 홈페이지 목록",
+      "row_no": 1
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0047",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 2 | 구분: WEB | 자산코드(있을 시 기입): WEB-002 | 자산명: LMS 수강 서비스 | 설명: 회원 로그인, 강의 수강, 학습기록 관리 | 개발 담당자: 박개발 | 구축 업체: 자체 개발 | URL: https://epilepsy-squiggly-shallot.ngrok-free.dev/ | 운영자: 박지훈 | 책임자: 김민수 | 관리부서: 개발팀 | 기밀성(C): 3 | 무결성(I): 3 | 가용성(A): 3 | 합계: 9 | 자산등급: 1등급",
+    "metadata": {
+      "section": "6. 홈페이지 > 홈페이지 목록",
+      "row_no": 2
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0048",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 3 | 구분: WEB | 자산코드(있을 시 기입): WEB-003 | 자산명: 관리자 페이지 | 설명: 회원·강의·문의·정산 상태 관리 | 개발 담당자: 박개발 | 구축 업체: 자체 개발 | URL: https://epilepsy-squiggly-shallot.ngrok-free.dev/ | 운영자: 이서연 | 책임자: 김민수 | 관리부서: 정보보호팀 | 기밀성(C): 3 | 무결성(I): 3 | 가용성(A): 2 | 합계: 8 | 자산등급: 1등급",
+    "metadata": {
+      "section": "6. 홈페이지 > 홈페이지 목록",
+      "row_no": 3
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0049",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 4 | 구분: WEB | 자산코드(있을 시 기입): WEB-004 | 자산명: 모바일 API | 설명: 모바일 앱 로그인·수강·학습진도 연동 API | 개발 담당자: 박개발 | 구축 업체: 자체 개발 | URL: https://epilepsy-squiggly-shallot.ngrok-free.dev/ | 운영자: 박지훈 | 책임자: 김민수 | 관리부서: 개발팀 | 기밀성(C): 3 | 무결성(I): 3 | 가용성(A): 3 | 합계: 9 | 자산등급: 1등급",
+    "metadata": {
+      "section": "6. 홈페이지 > 홈페이지 목록",
+      "row_no": 4
+    },
+    "user_selection": null
+  },
+  {
+    "inspection_no": 50,
+    "chunk_id": "자산관리대장-0050",
+    "evidence_name": "자산관리대장.xlsx",
+    "content": ": 5 | 구분: WEB | 자산코드(있을 시 기입): WEB-005 | 자산명: 고객문의 페이지 | 설명: 1:1 문의, 환불문의, 장애접수 | 개발 담당자: 한고객 | 구축 업체: 자체 개발 | URL: https://epilepsy-squiggly-shallot.ngrok-free.dev/ | 운영자: 한지민 | 책임자: 최은지 | 관리부서: 고객지원팀 | 기밀성(C): 2 | 무결성(I): 2 | 가용성(A): 2 | 합계: 6 | 자산등급: 2등급",
+    "metadata": {
+      "section": "6. 홈페이지 > 홈페이지 목록",
+      "row_no": 5
+    },
+    "user_selection": null
+  }
+]
