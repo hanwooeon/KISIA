@@ -233,7 +233,9 @@ export default function ResultReportPage({ taskId, selectedControls, uploadedFil
   useEffect(() => {
     if (!savedRef.current && results.length > 0 && !historyResults) {
       savedRef.current = true
-      const compliantCount = results.filter(r => r.is_compliant).length
+      const compliantCount   = results.filter(r => r.verdict === '적합').length
+      const conditionalCount = results.filter(r => r.verdict === '조건부 적합').length
+      const passCount        = compliantCount + conditionalCount
       onSaveHistory?.({
         id: Date.now(),
         date: new Date().toISOString(),
@@ -249,9 +251,10 @@ export default function ResultReportPage({ taskId, selectedControls, uploadedFil
           required_similarity: r.required_similarity,
         })),
         summary: {
-          total:     results.length,
-          compliant: compliantCount,
-          rate:      results.length > 0 ? Math.round((compliantCount / results.length) * 100) : 0,
+          total:       results.length,
+          compliant:   compliantCount,
+          conditional: conditionalCount,
+          rate:        results.length > 0 ? Math.round((passCount / results.length) * 100) : 0,
         },
       })
     }

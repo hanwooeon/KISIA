@@ -60,12 +60,14 @@
 .hstat-val   { font-size:1.3rem;font-weight:900;line-height:1; }
 .hstat-label { font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.3px; }
 
-.hstat-ok   .hstat-val   { color:#059669; }
-.hstat-ok   .hstat-label { color:#86EFAC; }
-.hstat-fail .hstat-val   { color:#DC2626; }
-.hstat-fail .hstat-label { color:#FCA5A5; }
-.hstat-rate .hstat-val   { color:#4F46E5; }
-.hstat-rate .hstat-label { color:#A5B4FC; }
+.hstat-ok          .hstat-val   { color:#059669; }
+.hstat-ok          .hstat-label { color:#86EFAC; }
+.hstat-conditional .hstat-val   { color:#D97706; }
+.hstat-conditional .hstat-label { color:#FDE68A; }
+.hstat-fail        .hstat-val   { color:#DC2626; }
+.hstat-fail        .hstat-label { color:#FCA5A5; }
+.hstat-rate        .hstat-val   { color:#4F46E5; }
+.hstat-rate        .hstat-label { color:#A5B4FC; }
 
 .history-rate-bar {
   width: 80px;
@@ -151,8 +153,9 @@
   border-left: 3px solid #E2E8F0;
 }
 
-.history-item.hi-ok   { border-left-color: #059669; }
-.history-item.hi-fail { border-left-color: #DC2626; }
+.history-item.hi-ok          { border-left-color: #059669; }
+.history-item.hi-conditional { border-left-color: #D97706; }
+.history-item.hi-fail        { border-left-color: #DC2626; }
 
 .hi-top {
   display: flex;
@@ -178,8 +181,9 @@
   white-space: nowrap;
 }
 
-.hi-badge-ok   { background: #DCFCE7; color: #15803D; }
-.hi-badge-fail { background: #FEE2E2; color: #DC2626; }
+.hi-badge-ok          { background: #DCFCE7; color: #15803D; }
+.hi-badge-conditional { background: #FEF3C7; color: #D97706; }
+.hi-badge-fail        { background: #FEE2E2; color: #DC2626; }
 
 .hi-risk {
   font-size: 0.68rem;

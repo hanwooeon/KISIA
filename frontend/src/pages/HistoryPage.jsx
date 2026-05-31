@@ -60,6 +60,13 @@ export default function HistoryPage({ analyses, onDelete, onClearAll, onViewHist
         {analyses.map((entry, idx) => {
           const isOpen = expanded[idx]
           const { summary, results, date } = entry
+          const conditionalCount = summary.conditional !== undefined
+            ? summary.conditional
+            : (results || []).filter(r => r.verdict === '조건부 적합').length
+          const compliantCount = summary.conditional !== undefined
+            ? summary.compliant
+            : (results || []).filter(r => r.verdict === '적합').length
+          const nonCompliantCount = summary.total - compliantCount - conditionalCount
           return (
             <div key={entry.id} className="history-entry card">
               <div className="history-entry-top">
@@ -79,11 +86,15 @@ export default function HistoryPage({ analyses, onDelete, onClearAll, onViewHist
                 {/* 오른쪽: 통계 + 결과 보기 + 삭제 */}
                 <div className="history-entry-stats">
                   <div className="hstat hstat-ok">
-                    <span className="hstat-val">{summary.compliant}</span>
+                    <span className="hstat-val">{compliantCount}</span>
                     <span className="hstat-label">적합</span>
                   </div>
+                  <div className="hstat hstat-conditional">
+                    <span className="hstat-val">{conditionalCount}</span>
+                    <span className="hstat-label">조건부</span>
+                  </div>
                   <div className="hstat hstat-fail">
-                    <span className="hstat-val">{summary.total - summary.compliant}</span>
+                    <span className="hstat-val">{nonCompliantCount}</span>
                     <span className="hstat-label">부적합</span>
                   </div>
                   <div className="hstat hstat-rate">
@@ -117,12 +128,17 @@ export default function HistoryPage({ analyses, onDelete, onClearAll, onViewHist
               {isOpen && (
                 <div className="history-detail">
                   <div className="history-detail-grid">
-                    {results.map((r, ri2) => (
-                      <div key={ri2} className={`history-item ${r.is_compliant ? 'hi-ok' : 'hi-fail'}`}>
+                    {results.map((r, ri2) => {
+                      const v = r.verdict || (r.is_compliant ? '적합' : '부적합')
+                      const hiClass    = v === '적합' ? 'hi-ok' : v === '조건부 적합' ? 'hi-conditional' : 'hi-fail'
+                      const badgeClass = v === '적합' ? 'hi-badge-ok' : v === '조건부 적합' ? 'hi-badge-conditional' : 'hi-badge-fail'
+                      const icon       = v === '적합' ? '✓' : v === '조건부 적합' ? '△' : '✕'
+                      return (
+                      <div key={ri2} className={`history-item ${hiClass}`}>
                         <div className="hi-top">
                           <span className="hi-id">{r.control_id}</span>
-                          <span className={`hi-badge ${r.is_compliant ? 'hi-badge-ok' : 'hi-badge-fail'}`}>
-                            {r.is_compliant ? '✓ 적합' : '✕ 부적합'}
+                          <span className={`hi-badge ${badgeClass}`}>
+                            {icon} {v}
                           </span>
                         </div>
                         <div className="hi-name">{r.control_name}</div>
@@ -135,7 +151,8 @@ export default function HistoryPage({ analyses, onDelete, onClearAll, onViewHist
                           </span>
                         </div>
                       </div>
-                    ))}
+                    )
+                    })}
                   </div>
                   <div style={{ textAlign:'center', marginTop:14 }}>
                     <button className="btn-primary" style={{ fontSize:'0.84rem', padding:'8px 20px' }}

@@ -334,17 +334,79 @@ def _chunk_with_hybrid(doc, source: str, page_map: dict[str, int] | None = None)
     return chunks
 
 
+# ── 형식 6: xlsx 시트별 행 단위 청킹 ─────────────────────────────────────
+
+def _chunk_xlsx_by_rows(text: str, source: str) -> list[dict]:
+    """_parse_xlsx가 생성한 ## Sheet / ### Section / 테이블 마크다운을 행 단위로 청킹."""
+    chunks = []
+    chunk_id = 1
+    current_sheet: str | None = None
+    current_subsection: str | None = None
+    headers: list[str] | None = None
+    row_no = 0
+
+    for line in text.split('\n'):
+        stripped = line.strip()
+        if re.match(r'^## ', stripped):
+            current_sheet = stripped.lstrip('#').strip()
+            current_subsection = None
+            headers = None
+            row_no = 0
+            continue
+
+        if re.match(r'^### ', stripped):
+            current_subsection = stripped.lstrip('#').strip()
+            headers = None
+            row_no = 0
+            continue
+
+        if not stripped.startswith('|'):
+            continue
+
+        cells = _parse_row(stripped)
+        if cells is None:
+            continue
+
+        if headers is None:
+            headers = cells
+            row_no = 0
+            continue
+
+        if len(cells) != len(headers):
+            continue
+
+        row = dict(zip(headers, cells))
+        content_parts = [f"{k}: {v}" for k, v in row.items() if _nullable(v)]
+        content = ' | '.join(content_parts)
+        if not content:
+            continue
+
+        row_no += 1
+        section = current_sheet or '본문'
+        if current_subsection:
+            section = f"{section} > {current_subsection}"
+
+        chunks.append({
+            'chunk_id': f"{Path(source).stem}-{chunk_id:04d}",
+            'source': source,
+            'section': section,
+            'row_no': row_no,
+            'content': content,
+            'element_type': 'table',
+        })
+        chunk_id += 1
+
+    return chunks
+
+
 # ── 확장자 기반 분기 ──────────────────────────────────────────────────────
 
 def chunk_markdown(text: str, source: str, elements: list[dict] | None = None, doc=None, page_map: dict[str, int] | None = None) -> list[dict]:
     ext = Path(source).suffix.lower()
 
-    # xlsx: 항상 테이블 구조의 점검 데이터 → 행 단위 청킹
+    # xlsx: 시트별 행 단위 청킹 (## SheetName + 테이블 구조)
     if ext == '.xlsx':
-        for line in text.split('\n'):
-            if line.startswith('|') and '점검일' in line and '점검구역' in line:
-                return _chunk_flat_table(text, source)
-        return _chunk_structured(text, source)
+        return _chunk_xlsx_by_rows(text, source)
 
     # docx / pdf: HybridChunker로 의미 단위 청킹
     if doc is not None:
