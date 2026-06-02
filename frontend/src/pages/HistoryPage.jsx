@@ -62,7 +62,7 @@ export default function HistoryPage({ analyses, onDelete, onClearAll, onViewHist
           const { summary, results, date } = entry
           const conditionalCount = summary.conditional !== undefined
             ? summary.conditional
-            : (results || []).filter(r => r.verdict === '조건부 적합').length
+            : (results || []).filter(r => r.verdict === '부분 적합').length
           const compliantCount = summary.conditional !== undefined
             ? summary.compliant
             : (results || []).filter(r => r.verdict === '적합').length
@@ -91,7 +91,7 @@ export default function HistoryPage({ analyses, onDelete, onClearAll, onViewHist
                   </div>
                   <div className="hstat hstat-conditional">
                     <span className="hstat-val">{conditionalCount}</span>
-                    <span className="hstat-label">조건부</span>
+                    <span className="hstat-label">부분적합</span>
                   </div>
                   <div className="hstat hstat-fail">
                     <span className="hstat-val">{nonCompliantCount}</span>
@@ -130,9 +130,9 @@ export default function HistoryPage({ analyses, onDelete, onClearAll, onViewHist
                   <div className="history-detail-grid">
                     {results.map((r, ri2) => {
                       const v = r.verdict || (r.is_compliant ? '적합' : '부적합')
-                      const hiClass    = v === '적합' ? 'hi-ok' : v === '조건부 적합' ? 'hi-conditional' : 'hi-fail'
-                      const badgeClass = v === '적합' ? 'hi-badge-ok' : v === '조건부 적합' ? 'hi-badge-conditional' : 'hi-badge-fail'
-                      const icon       = v === '적합' ? '✓' : v === '조건부 적합' ? '△' : '✕'
+                      const hiClass    = v === '적합' ? 'hi-ok' : v === '부분 적합' ? 'hi-conditional' : 'hi-fail'
+                      const badgeClass = v === '적합' ? 'hi-badge-ok' : v === '부분 적합' ? 'hi-badge-conditional' : 'hi-badge-fail'
+                      const icon       = v === '적합' ? '✓' : v === '부분 적합' ? '△' : '✕'
                       return (
                       <div key={ri2} className={`history-item ${hiClass}`}>
                         <div className="hi-top">
@@ -143,10 +143,10 @@ export default function HistoryPage({ analyses, onDelete, onClearAll, onViewHist
                         </div>
                         <div className="hi-name">{r.control_name}</div>
                         <div className="hi-scores">
-                          <span className="hi-score" style={{ color: r.guide_similarity >= 0.7 ? '#059669' : '#DC2626' }}>
+                          <span className="hi-score" style={{ color: r.guide_similarity >= 0.75 ? '#059669' : '#DC2626' }}>
                             가이드 {(r.guide_similarity * 100).toFixed(0)}%
                           </span>
-                          <span className="hi-score" style={{ color: r.required_similarity >= 0.65 ? '#059669' : '#DC2626' }}>
+                          <span className="hi-score" style={{ color: r.required_similarity >= 0.75 ? '#059669' : '#DC2626' }}>
                             핵심요소 {(r.required_similarity * 100).toFixed(0)}%
                           </span>
                         </div>

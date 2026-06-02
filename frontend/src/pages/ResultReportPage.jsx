@@ -6,7 +6,7 @@ import './ResultReportPage.css'
 // ── 3단계 판정 색상 정의 ──────────────────────────────────────────
 const VERDICT_STYLE = {
   '적합':      { color: '#059669', bg: '#DCFCE7', border: '#86EFAC', dotColor: '#059669', icon: '✓' },
-  '조건부 적합': { color: '#D97706', bg: '#FEF3C7', border: '#FDE68A', dotColor: '#D97706', icon: '△' },
+  '부분 적합': { color: '#D97706', bg: '#FEF3C7', border: '#FDE68A', dotColor: '#D97706', icon: '△' },
   '부적합':    { color: '#DC2626', bg: '#FEE2E2', border: '#FCA5A5', dotColor: '#DC2626', icon: '✕' },
 }
 
@@ -19,7 +19,7 @@ function getVerdict(r) {
 
 function getRiskLevel(verdict) {
   if (verdict === '적합') return 'LOW'
-  if (verdict === '조건부 적합') return 'MEDIUM'
+  if (verdict === '부분 적합') return 'MEDIUM'
   return 'HIGH'
 }
 
@@ -35,12 +35,12 @@ function generateDetailedReason(ctrl_name, guide_sim, req_sim, verdict) {
   if (verdict === '적합') {
     return `제출된 증적자료는 「${ctrl_name}」 항목의 인증기준을 충족하는 것으로 판단됩니다. 가이드라인 유사도(${g}%)가 기준치(70%)를 상회하고, 필수확인요소 유사도(${r}%)가 기준치(65%)를 만족하여 해당 항목의 이행 여부가 충분히 입증되었습니다.`
   }
-  if (verdict === '조건부 적합') {
+  if (verdict === '부분 적합') {
     return `제출된 증적자료는 「${ctrl_name}」 항목의 핵심 요건을 대체로 충족합니다. 다만 일부 보완을 통해 심사 리스크를 낮출 수 있습니다. 아래 보완 권고사항을 참고하시기 바랍니다.`
   }
   const issues = []
-  if (guide_sim < 0.7) issues.push(`가이드라인 유사도(${g}%)가 기준치(70%)에 미달`)
-  if (req_sim < 0.65) issues.push(`필수확인요소 유사도(${r}%)가 기준치(65%)에 미달`)
+  if (guide_sim < 0.75) issues.push(`가이드라인 유사도(${g}%)가 기준치(75%)에 미달`)
+  if (req_sim < 0.75) issues.push(`필수확인요소 유사도(${r}%)가 기준치(75%)에 미달`)
   return `제출된 증적자료는 「${ctrl_name}」 항목의 인증기준을 충족하지 못하는 것으로 판단됩니다. ${issues.join(', ')}하여 현재 증적만으로는 해당 항목의 이행 여부를 충분히 입증하기 어렵습니다. 하기 개선 권고사항을 참고하여 증적을 보완하시기 바랍니다.`
 }
 
@@ -74,7 +74,8 @@ function generateMockResults(selectedControls, files) {
 
     const guide_sim = +(file_results.reduce((s, r) => s + r.guide_similarity, 0) / file_results.length).toFixed(2)
     const req_sim   = +(file_results.reduce((s, r) => s + r.keyword_similarity, 0) / file_results.length).toFixed(2)
-    const verdict   = guide_sim >= 0.7 && req_sim >= 0.65 ? '적합' : guide_sim >= 0.65 ? '조건부 적합' : '부적합'
+    const minSim    = Math.min(guide_sim, req_sim)
+    const verdict   = minSim >= 0.75 ? '적합' : minSim >= 0.60 ? '부분 적합' : '부적합'
 
     const overall = {
       guide_similarity:   guide_sim,
@@ -83,7 +84,7 @@ function generateMockResults(selectedControls, files) {
       is_compliant:       verdict !== '부적합',
       judgment_reason:    generateDetailedReason(ctrl.control_name, guide_sim, req_sim, verdict),
       improvement:        verdict === '부적합' ? generateImprovement(ctrl.control_name) : null,
-      action_items:       verdict === '조건부 적합'
+      action_items:       verdict === '부분 적합'
         ? [{ type: '권고', title: '보완 서류 추가', description: '핵심 요건은 확인되나 일부 세부 사항을 보완하면 더 확실하게 통과할 수 있습니다.', example: '관련 문서 참고' }]
         : [],
     }
@@ -153,10 +154,10 @@ function ActionItemCard({ item }) {
   )
 }
 
-// ── 제출 시 예상 시나리오 박스 (조건부 적합용) ───────────────────
+// ── 제출 시 예상 시나리오 박스 (부분 적합용) ───────────────────
 function SubmitScenarioBox({ verdict, actionItems }) {
   if (verdict === '적합') return null
-  if (verdict === '조건부 적합') {
+  if (verdict === '부분 적합') {
     return (
       <div className="scenario-box scenario-conditional">
         <div className="scenario-icon">📋</div>
@@ -234,7 +235,7 @@ export default function ResultReportPage({ taskId, selectedControls, uploadedFil
     if (!savedRef.current && results.length > 0 && !historyResults) {
       savedRef.current = true
       const compliantCount   = results.filter(r => r.verdict === '적합').length
-      const conditionalCount = results.filter(r => r.verdict === '조건부 적합').length
+      const conditionalCount = results.filter(r => r.verdict === '부분 적합').length
       const passCount        = compliantCount + conditionalCount
       onSaveHistory?.({
         id: Date.now(),
@@ -271,7 +272,7 @@ export default function ResultReportPage({ taskId, selectedControls, uploadedFil
 
   const total              = results.length
   const compliantCount     = results.filter(r => getVerdict(r) === '적합').length
-  const conditionalCount   = results.filter(r => getVerdict(r) === '조건부 적합').length
+  const conditionalCount   = results.filter(r => getVerdict(r) === '부분 적합').length
   const nonCompliantCount  = results.filter(r => getVerdict(r) === '부적합').length
   const passCount          = compliantCount + conditionalCount
   const rate               = total > 0 ? Math.round((passCount / total) * 100) : 0
@@ -313,7 +314,7 @@ export default function ResultReportPage({ taskId, selectedControls, uploadedFil
           <span className="summary-unit">개</span>
         </div>
         <div className="summary-card card conditional-card">
-          <span className="summary-label">조건부 적합</span>
+          <span className="summary-label">부분적합</span>
           <span className="summary-big orange">{conditionalCount}</span>
           <span className="summary-unit">개</span>
         </div>
@@ -450,17 +451,6 @@ export default function ResultReportPage({ taskId, selectedControls, uploadedFil
                   )}
                 </div>
               )}
-
-              {/* 가이드라인 부합도 */}
-              <div className="detail-section">
-                <div className="detail-section-title">가이드라인 부합도</div>
-                <ScoreGauge
-                  label="가이드라인 부합도"
-                  score={detail.overall?.guide_similarity ?? detail.guide_similarity}
-                  threshold={0.7}
-                  color={(detail.overall?.guide_similarity ?? detail.guide_similarity) >= 0.7 ? '#059669' : '#DC2626'}
-                />
-              </div>
 
               {/* 판단 근거 */}
               <div className="detail-section">

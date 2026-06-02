@@ -1,10 +1,32 @@
 from __future__ import annotations
 import os
+import re
 import json
 from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
+
+
+def _parse_json(text: str) -> dict:
+    """응답 텍스트에서 JSON 추출 (마크다운 코드블록 포함 대응)"""
+    if not text:
+        return {}
+    # ```json ... ``` 또는 ``` ... ``` 블록 추출
+    m = re.search(r'```(?:json)?\s*([\s\S]*?)```', text)
+    if m:
+        text = m.group(1).strip()
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        # { } 범위만 추출 재시도
+        m2 = re.search(r'\{[\s\S]*\}', text)
+        if m2:
+            try:
+                return json.loads(m2.group())
+            except json.JSONDecodeError:
+                pass
+    return {}
 
 _client: OpenAI | None = None
 
@@ -160,32 +182,32 @@ def judge(
         ) + '\n'
 
     # 유사도 점수 해석 (점수를 무시하지 않고 판단 근거로 적극 활용)
-    guide_pass   = guide_similarity >= 0.70
-    keyword_pass = keyword_similarity >= 0.65
+    guide_pass   = guide_similarity >= 0.75
+    keyword_pass = keyword_similarity >= 0.75
     g_pct = f"{guide_similarity:.1%}"
     k_pct = f"{keyword_similarity:.1%}"
 
     if guide_pass and keyword_pass:
         sim_guide = (
-            f"두 점수 모두 기준 충족 (가이드라인 {g_pct} ≥ 70%, 핵심 요소 {k_pct} ≥ 65%).\n"
+            f"두 점수 모두 기준 충족 (가이드라인 {g_pct} ≥ 75%, 핵심 요소 {k_pct} ≥ 75%).\n"
             "증적이 이 항목을 충분히 다루고 있다는 강한 신호입니다. "
-            "필수확인요소가 모두 확인되면 적합, 일부 미흡하면 조건부 적합으로 판단하세요."
+            "필수확인요소가 모두 확인되면 적합, 일부 미흡하면 부분 적합으로 판단하세요."
         )
     elif guide_pass and not keyword_pass:
         sim_guide = (
-            f"가이드라인 부합도({g_pct})는 충족하나 핵심 요소 반영도({k_pct})가 기준(65%) 미달.\n"
+            f"가이드라인 부합도({g_pct})는 충족하나 핵심 요소 반영도({k_pct})가 기준(75%) 미달.\n"
             "증적 방향은 맞지만 필수확인요소 일부가 명확히 드러나지 않습니다. "
-            "필수확인요소 중 미확인 항목이 있으면 조건부 적합 또는 부적합으로 판단하세요."
+            "필수확인요소 중 미확인 항목이 있으면 부분 적합 또는 부적합으로 판단하세요."
         )
     elif not guide_pass and keyword_pass:
         sim_guide = (
-            f"가이드라인 부합도({g_pct})가 기준(70%) 미달. 키워드는 있으나 내용이 부족합니다.\n"
+            f"가이드라인 부합도({g_pct})가 기준(75%) 미달. 키워드는 있으나 내용이 부족합니다.\n"
             "증적이 이 항목의 실질적 이행을 입증하는지 엄격히 확인하세요. "
             "이행 실적(결과, 날짜, 담당자, 조치 내용)이 없으면 부적합이 원칙입니다."
         )
     else:
         sim_guide = (
-            f"두 점수 모두 기준 미달 (가이드라인 {g_pct} < 70%, 핵심 요소 {k_pct} < 65%).\n"
+            f"두 점수 모두 기준 미달 (가이드라인 {g_pct} < 75%, 핵심 요소 {k_pct} < 75%).\n"
             "증적이 이 항목을 다루고 있지 않을 가능성이 높습니다. "
             "특별히 명확한 이행 실적이 확인되지 않으면 부적합으로 판단하는 것이 원칙입니다."
         )
@@ -218,10 +240,10 @@ def judge(
 {'═'*60}
 📊 유사도 분석 결과
 {'═'*60}
-● 가이드라인 부합도 : {g_pct}  (기준 70% 이상 → {'✅ 충족' if guide_pass else '⚠️ 기준 미달'})
+● 가이드라인 부합도 : {g_pct}  (기준 75% 이상 → {'✅ 충족' if guide_pass else '⚠️ 기준 미달'})
   : 제출 증적이 이 항목의 가이드라인 내용과 얼마나 유사한지를 수치화한 것
 
-● 핵심 요소 반영도 : {k_pct}  (기준 65% 이상 → {'✅ 충족' if keyword_pass else '⚠️ 기준 미달'})
+● 핵심 요소 반영도 : {k_pct}  (기준 75% 이상 → {'✅ 충족' if keyword_pass else '⚠️ 기준 미달'})
   : 필수확인요소가 증적에 얼마나 잘 반영되어 있는지를 수치화한 것
 
 📌 점수 해석 및 심사 방향:
@@ -258,7 +280,7 @@ def judge(
   - 가이드라인이 요구하는 내용이 제출 증적에서 모두 명확하게 확인됨
   - 필수확인요소 체크리스트도 충족됨
 
-⚠️ 조건부 적합
+⚠️ 부분 적합
   - 가이드라인의 핵심 요건은 증적으로 입증되었으나
     일부 세부 사항(날짜 불명확, 버전 미기재, 담당자 누락 등)이 보완되면 더 완전해지는 경우
   - 현재 증적으로 심사 통과 가능성은 있으나 심사관이 추가 자료를 요청할 수 있는 경우
@@ -271,8 +293,9 @@ def judge(
 ━━ 유사도 점수의 역할 ━━
 가이드라인 부합도 점수는 증적이 가이드라인과 얼마나 유사한지를 수치화한 참고 지표입니다.
 ISMS-P 공식 기준이 아니므로 판정의 절대 기준으로 사용하지 마세요.
-- 70% 이상: 증적이 가이드라인 내용을 잘 다루고 있을 가능성 높음
-- 70% 미만: 증적이 가이드라인과 맞지 않을 수 있음 → 가이드라인 요건을 더 꼼꼼히 대조
+- 75% 이상: 증적이 가이드라인 내용을 잘 다루고 있을 가능성 높음
+- 60~75%: 부분 적합 가능성 — 핵심 요건 충족 여부를 꼼꼼히 확인
+- 60% 미만: 증적이 가이드라인과 맞지 않을 수 있음 → 부적합 검토
 - 점수와 무관하게, 가이드라인 요건 충족 여부가 최종 판정 기준
 
 {'═'*60}
@@ -304,9 +327,9 @@ judgment_reason:
 
 action_items: [] (빈 배열)
 
-━━━ 조건부 적합인 경우 ━━━
+━━━ 부분 적합인 경우 ━━━
 judgment_reason:
-**판정:** 조건부 적합입니다. 핵심 요건은 확인되나 보완하면 더 확실하게 통과할 수 있습니다.
+**판정:** 부분 적합입니다. 핵심 요건은 확인되나 보완하면 더 확실하게 통과할 수 있습니다.
 
 **근거:**
 이 항목은 [가이드라인 요구사항]합니다.
@@ -333,9 +356,9 @@ action_items: (필수 항목 먼저, type: "필수" → 보완 권고 type: "권
 - 핵심 요소 반영도는 절대 언급하지 마세요.
 
 {{
-  "verdict": "적합" 또는 "조건부 적합" 또는 "부적합",
+  "verdict": "적합"(75% 이상) 또는 "부분 적합"(60~75%) 또는 "부적합"(60% 미만),
   "judgment_reason": "**판정:** 내용\\n\\n**근거:**\\n설명\\n- 출처: 내용\\n→ 결론",
-  "improvement": "부적합인 경우만: 어떤 요구사항이 미충족인지 + 어떤 문서를 추가하면 되는지. 적합·조건부 적합이면 null",
+  "improvement": "부적합인 경우만: 어떤 요구사항이 미충족인지 + 어떤 문서를 추가하면 되는지. 적합·부분 적합이면 null",
   "action_items": [
     {{
       "type": "필수" 또는 "권고",
@@ -370,7 +393,7 @@ action_items: (필수 항목 먼저, type: "필수" → 보완 권고 type: "권
 
     raw = json.loads(response.choices[0].message.content)
     verdict = raw.get('verdict', '')
-    if verdict not in ('적합', '조건부 적합', '부적합'):
+    if verdict not in ('적합', '부분 적합', '부적합'):
         verdict = '적합' if raw.get('is_compliant', False) else '부적합'
     return {
         'verdict':          verdict,

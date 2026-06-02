@@ -5,7 +5,7 @@ function pct(v) { return (v * 100).toFixed(1) + '%' }
 
 const VERDICT_STYLE = {
   '적합':      { text: '#065F46', bg: '#ECFDF5', border: '#6EE7B7', label: '적합' },
-  '조건부 적합': { text: '#92400E', bg: '#FFFBEB', border: '#FCD34D', label: '조건부 적합' },
+  '부분 적합': { text: '#92400E', bg: '#FFFBEB', border: '#FCD34D', label: '부분 적합' },
   '부적합':    { text: '#991B1B', bg: '#FEF2F2', border: '#FCA5A5', label: '부적합' },
 }
 
@@ -172,7 +172,7 @@ function itemDetailHtml(r, index) {
 export async function downloadFullPDF(results, dateStr) {
   const total            = results.length
   const compliantCount   = results.filter(r => getVerdict(r) === '적합').length
-  const conditionalCount = results.filter(r => getVerdict(r) === '조건부 적합').length
+  const conditionalCount = results.filter(r => getVerdict(r) === '부분 적합').length
   const nonCompliant     = results.filter(r => getVerdict(r) === '부적합').length
   const passCount        = compliantCount + conditionalCount
   const rate             = total > 0 ? Math.round((passCount / total) * 100) : 0
@@ -196,7 +196,7 @@ export async function downloadFullPDF(results, dateStr) {
   const summaryText = (() => {
     const lines = []
     if (nonCompliant > 0) lines.push(`부적합 <strong style="color:#991B1B;">${nonCompliant}개</strong> 항목은 필수확인요소가 충족되지 않아 인증 심사 시 결함으로 처리될 가능성이 있으며, 즉각적인 증적 보완이 요구됩니다.`)
-    if (conditionalCount > 0) lines.push(`조건부 적합 <strong style="color:#92400E;">${conditionalCount}개</strong> 항목은 핵심 요건은 충족하였으나 보완 권고사항을 참고하여 추가 증적을 사전에 준비하시기 바랍니다.`)
+    if (conditionalCount > 0) lines.push(`부분 적합 <strong style="color:#92400E;">${conditionalCount}개</strong> 항목은 핵심 요건은 충족하였으나 보완 권고사항을 참고하여 추가 증적을 사전에 준비하시기 바랍니다.`)
     if (compliantCount > 0) lines.push(`적합 <strong style="color:#065F46;">${compliantCount}개</strong> 항목은 현재 제출된 증적 기준으로 인증 요건을 충족하는 것으로 확인되었습니다.`)
     return lines.join(' ')
   })()
@@ -206,7 +206,6 @@ export async function downloadFullPDF(results, dateStr) {
 
     <!-- 표지 -->
     <div style="margin-bottom:36px;padding-bottom:24px;border-bottom:3px solid #0F172A;">
-      <div style="font-size:10px;color:#64748B;letter-spacing:3px;margin-bottom:10px;text-transform:uppercase;">Korea Internet &amp; Security Agency</div>
       <div style="font-size:26px;font-weight:900;color:#0F172A;letter-spacing:-0.8px;margin-bottom:4px;">ISMS-P 증적 점검 결과 보고서</div>
       <div style="font-size:12px;color:#64748B;margin-top:10px;">점검 일시: ${dateStr} &nbsp;·&nbsp; 300억 미만 중소기업 간편 인증 기준 적용</div>
     </div>
@@ -247,7 +246,7 @@ export async function downloadFullPDF(results, dateStr) {
         ${[
           { label: '점검 항목 수', val: `${total}개`, color: '#0F172A', bg: '#F8FAFC', border: '#E2E8F0' },
           { label: '적합',      val: `${compliantCount}개`, color: '#065F46', bg: '#ECFDF5', border: '#6EE7B7' },
-          { label: '조건부 적합', val: `${conditionalCount}개`, color: '#92400E', bg: '#FFFBEB', border: '#FCD34D' },
+          { label: '부분 적합', val: `${conditionalCount}개`, color: '#92400E', bg: '#FFFBEB', border: '#FCD34D' },
           { label: '부적합',    val: `${nonCompliant}개`, color: '#991B1B', bg: '#FEF2F2', border: '#FCA5A5' },
         ].map(s => `
           <div style="background:${s.bg};border:1px solid ${s.border};border-radius:7px;padding:14px 12px;text-align:center;">
@@ -256,7 +255,7 @@ export async function downloadFullPDF(results, dateStr) {
           </div>`).join('')}
       </div>
       <div style="padding:14px 18px;background:#F0F4FF;border:1px solid #C7D2FE;border-radius:7px;font-size:11px;color:#374151;line-height:1.8;">
-        총 <strong>${total}개</strong> 항목을 점검한 결과, 적합·조건부 적합 기준 <strong>${rate}%</strong>의 통과율을 기록하였습니다.
+        총 <strong>${total}개</strong> 항목을 점검한 결과, 적합·부분 적합 기준 <strong>${rate}%</strong>의 통과율을 기록하였습니다.
         ${summaryText}
       </div>
     </div>

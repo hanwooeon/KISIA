@@ -45,6 +45,11 @@ def get_control_info(control_id: str) -> dict | None:
 
 
 # ── 증적 데이터 테이블 ────────────────────────────────────────────
+def delete_evidence_chunks(control_id: str) -> None:
+    """분석 시작 전 해당 항목의 기존 증적 청크를 모두 삭제"""
+    _get_client().table('증적 데이터 테이블').delete().eq('user_selection', control_id).execute()
+
+
 def get_evidence_chunks(control_id: str) -> dict[int, list[dict]]:
     """
     user_selection이 control_id인 증적 청크를
@@ -91,7 +96,7 @@ def save_result(
     user_id: str | None = None,
 ) -> None:
     """분석 결과를 점검 결과 테이블에 저장"""
-    display_verdict = verdict if verdict in ('적합', '조건부 적합', '부적합') else ('적합' if is_compliant else '부적합')
+    display_verdict = verdict if verdict in ('적합', '부분 적합', '부적합') else ('적합' if is_compliant else '부적합')
     next_no = _next_result_no()
     _get_client().table('점검 결과 테이블').insert({
         '점검 번호':      next_no,

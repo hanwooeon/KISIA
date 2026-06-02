@@ -18,6 +18,7 @@ from services.db import (
     get_control_info,
     get_guide_chunks,
     get_evidence_chunks,
+    delete_evidence_chunks,
     save_result,
 )
 from services.similarity import best_chunk_similarity, keyword_similarity
@@ -67,6 +68,10 @@ async def analyze(body: AnalyzeRequest):
     3. LLM 판단
     4. 결과 저장 및 반환
     """
+    # ── 0. 기존 증적 데이터 초기화 (재분석 시 중복 방지) ────────────
+    for control_id in body.control_ids:
+        delete_evidence_chunks(control_id)
+
     # ── 1. 파일 처리 (OCR/청킹/임베딩, 동일 파일 중복 스킵) ─────────
     chunk_cache: dict[str, list] = {}  # md5 → chunks
 
